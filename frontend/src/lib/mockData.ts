@@ -516,7 +516,7 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90Ã
     tags: ["Mobile", "Puzzle", "Isometric", "Unity", "C#", "3D", "DOTween"],
     github: "",
     liveUrl: null,
-    image: "/cockescape/MainMenu.png",
+    image: "/cockescape/Room2.png",
     featured: false,
     order: 6,
     year: "2025",
