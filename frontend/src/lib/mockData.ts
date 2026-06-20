@@ -69,7 +69,7 @@ Built entirely solo over ~2.5 months (Feb 6 → Apr 16, 2026) with 25 commits co
     updatedAt: "2026-04-16T00:00:00Z",
     media: [
       // ── Demo Video ────────────────────────────────────────
-      { type: "video", url: "/verdi/demo.mp4", thumbnail: "/verdi/08-dashboard.jpeg", caption: "Full demo — auth, OTP, messaging, group chat, friend system, profile settings" },
+      { type: "video", url: "https://www.youtube.com/embed/JbCfIzaGSXo", thumbnail: "/verdi/08-dashboard.jpeg", caption: "Full demo — auth, OTP, messaging, group chat, friend system, profile settings" },
       // ── Auth ──────────────────────────────────────────────
       { type: "image", url: "/verdi/01-register.jpeg",           caption: "Register — create a Verdi account with name, username, email & password" },
       { type: "image", url: "/verdi/02-register-validation.png", caption: "Register — client-side validation errors on all fields" },
@@ -180,7 +180,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     createdAt: "2026-03-01T00:00:00Z",
     updatedAt: "2026-06-16T00:00:00Z",
     media: [
-      { type: "video",  url: "/edenisle/EdenIsleDemo.mp4",              thumbnail: "/edenisle/InGame.png",          caption: "Demo — player movement, melee combat, animal AI, and tree chopping" },
+      { type: "video",  url: "https://www.youtube.com/embed/jsfPKItPpy0", thumbnail: "/edenisle/InGame.png",          caption: "Demo — player movement, melee combat, animal AI, and tree chopping" },
       { type: "image",  url: "/edenisle/MainMenu.png",                  caption: "Main Menu" },
       { type: "image",  url: "/edenisle/CharacterSelection.png",        caption: "Character Selection" },
       { type: "image",  url: "/edenisle/ChoosingServer.png",            caption: "Choosing Server" },
@@ -296,7 +296,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-11-01T00:00:00Z",
     media: [
-      { type: "video", url: "/worldrift/trailer.mp4", thumbnail: "/worldrift/01-main-menu.jpg", caption: "Official trailer — gameplay, combat, bosses, and story moments" },
+      { type: "video", url: "https://www.youtube.com/embed/XuQeMdFV2ck", thumbnail: "/worldrift/01-main-menu.jpg", caption: "Official trailer — gameplay, combat, bosses, and story moments" },
       { type: "image", url: "/worldrift/01-main-menu.jpg",              caption: "Main Menu — pixel-art dark-fantasy title screen" },
       { type: "image", url: "/worldrift/02-char-select.jpg",            caption: "Character Selection — choose Warrior or Mage, each with a unique playstyle" },
       { type: "image", url: "/worldrift/03-hud-warrior.jpg",            caption: "Warrior HUD — HP/MP orbs, skill hotbar, EXP bar, and coin counter in gameplay" },
@@ -442,7 +442,7 @@ In the world of Elyndra, an ancient stone chooses its next champion. The player 
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-05-24T00:00:00Z",
     media: [
-      { type: "video", url: "/ashenblade/AshenDemo.mp4", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo — gameplay, combat, skills, NPC dialogue, and UI" },
+      { type: "video", url: "https://www.youtube.com/embed/qdf7tgF4WkQ", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo — gameplay, combat, skills, NPC dialogue, and UI" },
       // ── Scenes ─────────────────────────────────────────────
       { type: "image", url: "/ashenblade/gameplay-map1-village.jpg",  caption: "Main Menu" },
       { type: "image", url: "/ashenblade/gameplay-map2-cave.png",     caption: "Map 1 — Cave entrance: dark rocky cliffs with golden stone platforms, transition between worlds" },
