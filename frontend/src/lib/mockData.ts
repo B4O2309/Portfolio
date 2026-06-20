@@ -1,6 +1,6 @@
-import type { Project, BlogPostListItem, Job, Education, MediaItem } from "@/types";
+﻿import type { Project, BlogPostListItem, Job, Education, MediaItem } from "@/types";
 
-// ── Projects ──────────────────────────────────────────────
+// â”€â”€ Projects â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export const mockProjects: Project[] = [
   {
@@ -8,10 +8,10 @@ export const mockProjects: Project[] = [
     title: "Verdi",
     slug: "verdi",
     description:
-      "A full-stack real-time social chat application. Supports direct messaging, group chats, friend system, live notifications, media uploads and profile management — built solo from scratch in ~2.5 months.",
+      "A full-stack real-time social chat application. Supports direct messaging, group chats, friend system, live notifications, media uploads and profile management â€” built solo from scratch in ~2.5 months.",
     content: `## Overview
 
-Verdi is a full-featured social chat platform built with a modern React 19 + Node.js stack. Users can add friends, chat in real-time via direct or group conversations, react to messages, and manage their profiles — all with live notifications powered by Socket.io.
+Verdi is a full-featured social chat platform built with a modern React 19 + Node.js stack. Users can add friends, chat in real-time via direct or group conversations, react to messages, and manage their profiles â€” all with live notifications powered by Socket.io.
 
 ## Features
 
@@ -41,7 +41,7 @@ Verdi is a full-featured social chat platform built with a modern React 19 + Nod
 
 ### Developer Experience
 - Full REST API documented with Swagger UI
-- TypeScript throughout — frontend and backend
+- TypeScript throughout â€” frontend and backend
 - Zod schema validation on all forms
 - Zustand for lightweight, predictable client state
 
@@ -53,7 +53,7 @@ Verdi is a full-featured social chat platform built with a modern React 19 + Nod
 
 ## Development Timeline
 
-Built entirely solo over ~2.5 months (Feb 6 → Apr 16, 2026) with 25 commits covering auth, real-time messaging, group chats, friend system, notifications, and polish.`,
+Built entirely solo over ~2.5 months (Feb 6 â†’ Apr 16, 2026) with 25 commits covering auth, real-time messaging, group chats, friend system, notifications, and polish.`,
     category: "web",
     tags: ["React 19", "Socket.io", "TypeScript", "Node.js", "MongoDB", "Zustand", "TailwindCSS 4"],
     github: "",
@@ -68,37 +68,37 @@ Built entirely solo over ~2.5 months (Feb 6 → Apr 16, 2026) with 25 commits co
     createdAt: "2026-02-06T00:00:00Z",
     updatedAt: "2026-04-16T00:00:00Z",
     media: [
-      // ── Demo Video ────────────────────────────────────────
-      { type: "video", url: "https://www.youtube.com/embed/JbCfIzaGSXo", thumbnail: "/verdi/08-dashboard.jpeg", caption: "Full demo — auth, OTP, messaging, group chat, friend system, profile settings" },
-      // ── Auth ──────────────────────────────────────────────
-      { type: "image", url: "/verdi/01-register.jpeg",           caption: "Register — create a Verdi account with name, username, email & password" },
-      { type: "image", url: "/verdi/02-register-validation.png", caption: "Register — client-side validation errors on all fields" },
-      { type: "image", url: "/verdi/03-login.jpeg",              caption: "Login — username/password sign-in or Continue with Google (OAuth 2.0)" },
-      { type: "image", url: "/verdi/04-login-validation.png",    caption: "Login — inline validation feedback before submission" },
-      // ── OTP / Password Reset ──────────────────────────────
-      { type: "image", url: "/verdi/05-forgot-password.png",     caption: "Forgot Password — enter registered email to receive OTP via Nodemailer" },
-      { type: "image", url: "/verdi/06-otp-verify.png",          caption: "OTP Verification — 6-digit code sent to email, expires in 10 minutes" },
-      { type: "image", url: "/verdi/07-reset-password.png",      caption: "Reset Password — set new password after OTP verified" },
-      // ── Main App ─────────────────────────────────────────
-      { type: "image", url: "/verdi/08-dashboard.jpeg",          caption: "Main Dashboard — sidebar listing Group Chats & Direct Messages, sign-in success toast" },
-      { type: "image", url: "/verdi/09-new-conversation.png",    caption: "New Conversation — create a DM or group from your friends list" },
-      // ── Direct Messages ───────────────────────────────────
-      { type: "image", url: "/verdi/10-dm-empty.png",            caption: "Direct Message — newly opened conversation ready to chat" },
-      { type: "image", url: "/verdi/11-dm-chat.png",             caption: "Direct Message — real-time chat with emoji reactions, image upload, message actions" },
-      { type: "image", url: "/verdi/12-dm-reply-reaction.png",   caption: "Direct Message — reply to specific message, message seen indicator, reactions" },
-      // ── Group Chat ────────────────────────────────────────
-      { type: "image", url: "/verdi/13-group-chat.png",          caption: "Group Chat — multi-member group conversation with member avatars in header" },
-      { type: "image", url: "/verdi/14-group-search.png",        caption: "Group Chat — in-conversation message search with keyword highlight" },
-      // ── Conversation Management ───────────────────────────
-      { type: "image", url: "/verdi/15-convo-menu.jpeg",         caption: "Conversation Menu — hide or delete a conversation from the sidebar" },
-      // ── Friend System ─────────────────────────────────────
-      { type: "image", url: "/verdi/16-friend-requests.png",     caption: "Friend Requests — Received / Sent tabs, live \"You are now friends!\" toast" },
-      { type: "image", url: "/verdi/17-user-profile-card.png",   caption: "User Profile Card — view profile, Friends / Block actions inline in chat" },
-      // ── Profile & Settings ────────────────────────────────
-      { type: "image", url: "/verdi/18-profile-settings.jpeg",   caption: "Profile & Settings — Personal Info: display name, username, email, phone, bio" },
-      { type: "image", url: "/verdi/19-privacy-tab.jpeg",        caption: "Privacy Tab — Active Sessions, Change Password, Block Users, Danger Zone" },
-      { type: "image", url: "/verdi/20-change-password.jpeg",    caption: "Change Password — current + new password with Forgot Password flow" },
-      { type: "image", url: "/verdi/21-delete-account.png",      caption: "Delete Account — permanent action confirmation dialog (Danger Zone)" },
+      // â”€â”€ Demo Video â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "video", url: "https://www.youtube.com/embed/JbCfIzaGSXo", thumbnail: "/verdi/08-dashboard.jpeg", caption: "Full demo â€” auth, OTP, messaging, group chat, friend system, profile settings" },
+      // â”€â”€ Auth â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/01-register.jpeg",           caption: "Register â€” create a Verdi account with name, username, email & password" },
+      { type: "image", url: "/verdi/02-register-validation.png", caption: "Register â€” client-side validation errors on all fields" },
+      { type: "image", url: "/verdi/03-login.jpeg",              caption: "Login â€” username/password sign-in or Continue with Google (OAuth 2.0)" },
+      { type: "image", url: "/verdi/04-login-validation.png",    caption: "Login â€” inline validation feedback before submission" },
+      // â”€â”€ OTP / Password Reset â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/05-forgot-password.png",     caption: "Forgot Password â€” enter registered email to receive OTP via Nodemailer" },
+      { type: "image", url: "/verdi/06-otp-verify.png",          caption: "OTP Verification â€” 6-digit code sent to email, expires in 10 minutes" },
+      { type: "image", url: "/verdi/07-reset-password.png",      caption: "Reset Password â€” set new password after OTP verified" },
+      // â”€â”€ Main App â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/08-dashboard.jpeg",          caption: "Main Dashboard â€” sidebar listing Group Chats & Direct Messages, sign-in success toast" },
+      { type: "image", url: "/verdi/09-new-conversation.png",    caption: "New Conversation â€” create a DM or group from your friends list" },
+      // â”€â”€ Direct Messages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/10-dm-empty.png",            caption: "Direct Message â€” newly opened conversation ready to chat" },
+      { type: "image", url: "/verdi/11-dm-chat.png",             caption: "Direct Message â€” real-time chat with emoji reactions, image upload, message actions" },
+      { type: "image", url: "/verdi/12-dm-reply-reaction.png",   caption: "Direct Message â€” reply to specific message, message seen indicator, reactions" },
+      // â”€â”€ Group Chat â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/13-group-chat.png",          caption: "Group Chat â€” multi-member group conversation with member avatars in header" },
+      { type: "image", url: "/verdi/14-group-search.png",        caption: "Group Chat â€” in-conversation message search with keyword highlight" },
+      // â”€â”€ Conversation Management â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/15-convo-menu.jpeg",         caption: "Conversation Menu â€” hide or delete a conversation from the sidebar" },
+      // â”€â”€ Friend System â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/16-friend-requests.png",     caption: "Friend Requests â€” Received / Sent tabs, live \"You are now friends!\" toast" },
+      { type: "image", url: "/verdi/17-user-profile-card.png",   caption: "User Profile Card â€” view profile, Friends / Block actions inline in chat" },
+      // â”€â”€ Profile & Settings â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/verdi/18-profile-settings.jpeg",   caption: "Profile & Settings â€” Personal Info: display name, username, email, phone, bio" },
+      { type: "image", url: "/verdi/19-privacy-tab.jpeg",        caption: "Privacy Tab â€” Active Sessions, Change Password, Block Users, Danger Zone" },
+      { type: "image", url: "/verdi/20-change-password.jpeg",    caption: "Change Password â€” current + new password with Forgot Password flow" },
+      { type: "image", url: "/verdi/21-delete-account.png",      caption: "Delete Account â€” permanent action confirmation dialog (Danger Zone)" },
     ] as MediaItem[],
   },
   {
@@ -106,22 +106,22 @@ Built entirely solo over ~2.5 months (Feb 6 → Apr 16, 2026) with 25 commits co
     title: "Eden Isle",
     slug: "eden-isle",
     description:
-      "A first-person 3D survival horror co-op game built in Unity for 1–4 players — stranded on a mysterious island of failed biological experiments, players must manage hunger, thirst, body temperature, and sanity while fighting mutated wildlife and uncovering the dark truth to escape.",
+      "A first-person 3D survival horror co-op game built in Unity for 1â€“4 players â€” stranded on a mysterious island of failed biological experiments, players must manage hunger, thirst, body temperature, and sanity while fighting mutated wildlife and uncovering the dark truth to escape.",
     content: `## Overview
 
-**Eden Isle** is a first-person survival horror co-op game (1–4 players) developed as a 3-person Capstone project at VTC Academy (Game Programming major). Players are stranded on a mysterious island once used for secret biological experiments. To survive and escape they must manage resources, maintain sanity, explore a seamless open world, and work together against mutated creatures and psychological horror.
+**Eden Isle** is a first-person survival horror co-op game (1â€“4 players) developed as a 3-person Capstone project at VTC Academy (Game Programming major). Players are stranded on a mysterious island once used for secret biological experiments. To survive and escape they must manage resources, maintain sanity, explore a seamless open world, and work together against mutated creatures and psychological horror.
 
-The game uses **Photon Fusion** for authoritative multiplayer and features a full environmental interaction loop — from chopping trees to cooking meat over a campfire.
+The game uses **Photon Fusion** for authoritative multiplayer and features a full environmental interaction loop â€” from chopping trees to cooking meat over a campfire.
 
 ## Features
 
 ### Survival Systems
-- HP, Hunger, Thirst, Stamina, Body Temperature, and Sanity — each with decay rates and restoration conditions
+- HP, Hunger, Thirst, Stamina, Body Temperature, and Sanity â€” each with decay rates and restoration conditions
 - Low Sanity triggers hallucinations, false guidance, and temporary loss of player control
 
 ### Wildlife & Enemies
-- Passive animals: Deer, Rabbit, Toucan — flee or scatter on player approach
-- Aggressive predators: Wolf, Bear — stalk, chase, and attack; behaviour escalates at night
+- Passive animals: Deer, Rabbit, Toucan â€” flee or scatter on player approach
+- Aggressive predators: Wolf, Bear â€” stalk, chase, and attack; behaviour escalates at night
 - AI reacts to sound, sight, crouching, and time of day
 
 ### World & Environment
@@ -129,7 +129,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 - Dynamic day/night cycle (40-minute real-time day) and weather system
 - Resource gathering: chop trees, collect logs, hunt animals for meat
 
-### Co-op (1–4 Players)
+### Co-op (1â€“4 Players)
 - Shared world state: enemies, resources, structures, and player stats synced via Photon Fusion
 - Proximity voice chat via Photon Voice
 - Item dropping, sharing, and optional teammate revive
@@ -149,13 +149,13 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
 ### Animal AI
 - **Base animal class**: shared state machine (Wander, Suspect, Flee, Dead) with FOV vision detection, hearing via world sound events, short-term memory of last-known player position, and day/night behaviour modifiers that shift vision range, hearing sensitivity, and activity patterns
-- **Aggressive animal base**: extends the base with a Chase → Prepare Attack → Burst Attack → Recovery combat pipeline; a damage interrupt aborts the current phase and re-enters suspect state
+- **Aggressive animal base**: extends the base with a Chase â†’ Prepare Attack â†’ Burst Attack â†’ Recovery combat pipeline; a damage interrupt aborts the current phase and re-enters suspect state
 - **Species**: Wolf (pack predator, escalates at night), Bear (high-HP, devastating melee), Deer (passive, strong flee), Rabbit (passive, scatters as a group using boid-style neighbour checks), Toucan (passive bird with idle perch patterns)
 - **Animal spawner**: manages population caps and respawn timers per species across the open world
 
 ### Tree Chopping & Fall Logic
 - **Tree manager**: spatial-grid lookup built at startup for fast nearest-tree detection without full linear scans; per-tree HP with host-authoritative damage
-- **Fall animation**: a proxy tree object is spawned on chop and rotates 90° along the hit axis using an easing curve while the terrain tree is hidden, keeping the visual in sync across all clients
+- **Fall animation**: a proxy tree object is spawned on chop and rotates 90Â° along the hit axis using an easing curve while the terrain tree is hidden, keeping the visual in sync across all clients
 - **Log spawning**: log count derived from tree height, each piece raycasted to the ground before being network-spawned as a collectible
 - **State sync**: late-joining players receive the current felled-tree set from the host on connect so world state stays consistent
 
@@ -180,11 +180,11 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     createdAt: "2026-03-01T00:00:00Z",
     updatedAt: "2026-06-16T00:00:00Z",
     media: [
-      { type: "video",  url: "https://www.youtube.com/embed/jsfPKItPpy0", thumbnail: "/edenisle/InGame.png",          caption: "Demo — player movement, melee combat, animal AI, and tree chopping" },
+      { type: "video",  url: "https://www.youtube.com/embed/jsfPKItPpy0", thumbnail: "/edenisle/InGame.png",          caption: "Demo â€” player movement, melee combat, animal AI, and tree chopping" },
       { type: "image",  url: "/edenisle/MainMenu.png",                  caption: "Main Menu" },
       { type: "image",  url: "/edenisle/CharacterSelection.png",        caption: "Character Selection" },
       { type: "image",  url: "/edenisle/ChoosingServer.png",            caption: "Choosing Server" },
-      { type: "image",  url: "/edenisle/InGame.png",                    caption: "In-Game — first-person view" },
+      { type: "image",  url: "/edenisle/InGame.png",                    caption: "In-Game â€” first-person view" },
       { type: "image",  url: "/edenisle/CuttingTrees.png",              caption: "Cutting Trees" },
       { type: "image",  url: "/edenisle/FallenTree.png",                caption: "Fallen Tree" },
       { type: "image",  url: "/edenisle/PickUpFruit.png",               caption: "Picking Up Fruit" },
@@ -195,7 +195,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
       { type: "image",  url: "/edenisle/DearRunning.png",               caption: "Deer Running" },
       { type: "image",  url: "/edenisle/Afternoon.png",                 caption: "Afternoon Lighting" },
       { type: "image",  url: "/edenisle/Night.png",                     caption: "Night Scene" },
-      { type: "image",  url: "/edenisle/MarkerOtherPlayer.png",         caption: "Marker — Other Player" },
+      { type: "image",  url: "/edenisle/MarkerOtherPlayer.png",         caption: "Marker â€” Other Player" },
       { type: "image",  url: "/edenisle/Player2JoinedThe Game.png",     caption: "Player 2 Joined the Game" },
       { type: "image",  url: "/edenisle/Player2CuttingTree.png",        caption: "Player 2 Cutting Tree" },
       { type: "image",  url: "/edenisle/Player2BringLog.png",           caption: "Player 2 Bringing Log" },
@@ -206,7 +206,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     title: "The World Rift: Shadow of Chaos",
     slug: "the-world-rift",
     description:
-      "A 2D top-down action RPG built with Unity — set in a dark-fantasy world torn apart by an ancient rift between Order and Chaos. Choose Warrior or Mage, battle corrupted creatures, and confront Sir Kael, the fallen guardian behind the World Rift.",
+      "A 2D top-down action RPG built with Unity â€” set in a dark-fantasy world torn apart by an ancient rift between Order and Chaos. Choose Warrior or Mage, battle corrupted creatures, and confront Sir Kael, the fallen guardian behind the World Rift.",
     content: `## Overview
 
 **The World Rift: Shadow of Chaos** is a single-player 2D top-down ARPG prototype developed as a 2-person student project at VTC Academy (Game Programming major). Inspired by Souls-like design, the game emphasises real-time combat with dodge, parry, and skill-based depth across a linear dark-fantasy adventure.
@@ -214,30 +214,30 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 ## Features
 
 ### Two Playable Classes
-- **Warrior – Vessel of Valor**: Melee, shield, parry & block, high defense, short-range combos, survival kit
-- **Mage – Vessel of Wisdom**: Ranged elemental caster (fire, ice, lightning), teleport, burst damage, strong area control
+- **Warrior â€“ Vessel of Valor**: Melee, shield, parry & block, high defense, short-range combos, survival kit
+- **Mage â€“ Vessel of Wisdom**: Ranged elemental caster (fire, ice, lightning), teleport, burst damage, strong area control
 
 ### Real-time Combat System
 - Basic attacks with directional mouse aiming
 - Dash (Warrior) / Teleport (Mage), parry & block, crowd-control spells
-- 3 unique skills per class (Q / E / R) — cooldown & MP based
+- 3 unique skills per class (Q / E / R) â€” cooldown & MP based
 - Boss encounters with multi-phase patterns and telegraphed attacks
 
 ### World of Elyndra
-- **Elyndra Village** — safe hub, NPCs, shop, story beats
-- **The Forest / Forgotten Grove** — corrupted nature, early enemies
-- **The Dungeon** — deeper enemies and encounters
-- **The Inner Abyss** — final area and Sir Kael boss arena
+- **Elyndra Village** â€” safe hub, NPCs, shop, story beats
+- **The Forest / Forgotten Grove** â€” corrupted nature, early enemies
+- **The Dungeon** â€” deeper enemies and encounters
+- **The Inner Abyss** â€” final area and Sir Kael boss arena
 
 ### Bosses
-- **Infernal Hydra** — corrupted guardian of the forest
-- **Darian** — lost knight controlled by Rift energy
-- **Sir Kael** — fallen balance keeper, final boss wielding both Order & Chaos
+- **Infernal Hydra** â€” corrupted guardian of the forest
+- **Darian** â€” lost knight controlled by Rift energy
+- **Sir Kael** â€” fallen balance keeper, final boss wielding both Order & Chaos
 
 ### Progression & Economy
 - Character level system with auto-scaling stats per class
 - Skill levels that improve damage & reduce cooldowns
-- Equipment rarity tiers: Starter → Common → Rare → Epic → Legendary
+- Equipment rarity tiers: Starter â†’ Common â†’ Rare â†’ Epic â†’ Legendary
 - Gold economy from enemies, chests, and quests
 
 ### Inventory & Loot
@@ -263,23 +263,23 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
 ## My Contributions
 
-### Programming — Core Game & Game Flow
+### Programming â€” Core Game & Game Flow
 - Shop system: item listing, buy/sell transaction logic, and coin economy
 - NPC interaction system: dialogue trigger, branching dialogue activation, and boss cutscene hooks
 - Chest system: chest interaction logic, loot spawning, and locked-chest unlock conditions
 
-### Game Design — Story, NPCs & Bosses
+### Game Design â€” Story, NPCs & Bosses
 - Wrote the main narrative and all branching game endings (seal vs. absorb Chaos)
 - Designed NPC roster, full dialogue system, shop catalogue, chest placement, and health bar UI
 - Designed Warrior character and bosses Darian and Sir Kael (lore, visual direction, attack patterns)
 - Created loading screens, project report, game trailer, and presentation slides
 
-### Art & Environment — High-fidelity Environments
+### Art & Environment â€” High-fidelity Environments
 - Designed and built Elyndra Village, The Dungeon, and The Inner Abyss scenes
 - Created enemy sprites: Skeleton, Bat, and Necromancer
 - Animated skill VFX and combat effects for the Warrior character
 
-### UI/UX & Audio — Main Interface
+### UI/UX & Audio â€” Main Interface
 - Designed HUD, Shop, and Dialogue interfaces
 - Optimised UX flow and tuned sound effects for the Warrior and all three environments (Village, Dungeon, Inner Abyss)`,
     category: "game",
@@ -296,20 +296,20 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-11-01T00:00:00Z",
     media: [
-      { type: "video", url: "https://www.youtube.com/embed/XuQeMdFV2ck", thumbnail: "/worldrift/01-main-menu.jpg", caption: "Official trailer — gameplay, combat, bosses, and story moments" },
-      { type: "image", url: "/worldrift/01-main-menu.jpg",              caption: "Main Menu — pixel-art dark-fantasy title screen" },
-      { type: "image", url: "/worldrift/02-char-select.jpg",            caption: "Character Selection — choose Warrior or Mage, each with a unique playstyle" },
-      { type: "image", url: "/worldrift/03-hud-warrior.jpg",            caption: "Warrior HUD — HP/MP orbs, skill hotbar, EXP bar, and coin counter in gameplay" },
-      { type: "image", url: "/worldrift/05-village.jpg",                caption: "Elyndra Village — character style overview and hub-area map" },
-      { type: "image", url: "/worldrift/06-combat-warrior.jpg",         caption: "Warrior — Basic Attack: directional melee strike with interaction prompt" },
-      { type: "image", url: "/worldrift/warrior-parry.jpg",             caption: "Warrior — Parry & Block: precise counter on right-click timing" },
-      { type: "image", url: "/worldrift/warrior-groundbreaker.png",  caption: "Warrior — Groundbreaker (Ultimate): giant hammer from the sky, AoE energy burst" },
-      { type: "image", url: "/worldrift/warrior-heal.jpg",            caption: "Warrior — Heal: restoring health to the Warrior" },
-      { type: "image", url: "/worldrift/08-npc-village.jpg",            caption: "NPC dialogue — Eleonore (Celestial Mentor) first encounter in Elyndra Village" },
-      { type: "image", url: "/worldrift/09-npc-dungeon.jpg",            caption: "NPC dialogue — Eleonore second encounter deep inside The Dungeon" },
-      { type: "image", url: "/worldrift/11-shop.jpg",                   caption: "Shop UI — buy/sell consumables and equipment via the coin economy" },
-      { type: "image", url: "/worldrift/map-abyss.png",              caption: "The Inner Abyss — final area level design, Sir Kael's boss arena" },
-      { type: "image", url: "/worldrift/map-dungeon.jpg",             caption: "The Dungeon — level design map, opening area and Darian's domain" },
+      { type: "video", url: "https://www.youtube.com/embed/XuQeMdFV2ck", thumbnail: "/worldrift/01-main-menu.jpg", caption: "Official trailer â€” gameplay, combat, bosses, and story moments" },
+      { type: "image", url: "/worldrift/01-main-menu.jpg",              caption: "Main Menu â€” pixel-art dark-fantasy title screen" },
+      { type: "image", url: "/worldrift/02-char-select.jpg",            caption: "Character Selection â€” choose Warrior or Mage, each with a unique playstyle" },
+      { type: "image", url: "/worldrift/03-hud-warrior.jpg",            caption: "Warrior HUD â€” HP/MP orbs, skill hotbar, EXP bar, and coin counter in gameplay" },
+      { type: "image", url: "/worldrift/05-village.jpg",                caption: "Elyndra Village â€” character style overview and hub-area map" },
+      { type: "image", url: "/worldrift/06-combat-warrior.jpg",         caption: "Warrior â€” Basic Attack: directional melee strike with interaction prompt" },
+      { type: "image", url: "/worldrift/warrior-parry.jpg",             caption: "Warrior â€” Parry & Block: precise counter on right-click timing" },
+      { type: "image", url: "/worldrift/warrior-groundbreaker.png",  caption: "Warrior â€” Groundbreaker (Ultimate): giant hammer from the sky, AoE energy burst" },
+      { type: "image", url: "/worldrift/warrior-heal.jpg",            caption: "Warrior â€” Heal: restoring health to the Warrior" },
+      { type: "image", url: "/worldrift/08-npc-village.jpg",            caption: "NPC dialogue â€” Eleonore (Celestial Mentor) first encounter in Elyndra Village" },
+      { type: "image", url: "/worldrift/09-npc-dungeon.jpg",            caption: "NPC dialogue â€” Eleonore second encounter deep inside The Dungeon" },
+      { type: "image", url: "/worldrift/11-shop.jpg",                   caption: "Shop UI â€” buy/sell consumables and equipment via the coin economy" },
+      { type: "image", url: "/worldrift/map-abyss.png",              caption: "The Inner Abyss â€” final area level design, Sir Kael's boss arena" },
+      { type: "image", url: "/worldrift/map-dungeon.jpg",             caption: "The Dungeon â€” level design map, opening area and Darian's domain" },
     ] as MediaItem[],
   },
   {
@@ -317,42 +317,42 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
     title: "The Last Homestead",
     slug: "the-last-homestead",
     description:
-      "A solo 2D top-down action RPG built in Unity — follow Aric, a young warrior wielding an ancient sword, through a coastal village, haunted ruins, and a cursed dungeon to shatter the corruption consuming his world.",
+      "A solo 2D top-down action RPG built in Unity â€” follow Aric, a young warrior wielding an ancient sword, through a coastal village, haunted ruins, and a cursed dungeon to shatter the corruption consuming his world.",
     content: `## Overview
 
 **The Last Homestead** is a solo-developed 2D top-down action RPG prototype built in Unity for a student project at VTC Academy (Game Programming major). The game explores themes of moral corruption and redemption through tight real-time combat, progressive difficulty scaling, and dynamic audio design.
 
 ## Story
 
-The world is being consumed by an ancient curse — warriors who succumb to it become corrupted soldiers driven by malice. Aric, a young swordsman, must fight through three regions to face the source of corruption and free his homeland.
+The world is being consumed by an ancient curse â€” warriors who succumb to it become corrupted soldiers driven by malice. Aric, a young swordsman, must fight through three regions to face the source of corruption and free his homeland.
 
 Three acts, three maps:
-- **Map 1 — The Village**: A peaceful coastal island, tutorial area. NPCs (green soldiers) guide the environment, no combat yet.
-- **Map 2 — The Ruins**: Corrupted red soldiers swarm the ruins. Defeating enemies reveals escaping corrupted souls, hinting at the curse's origin. A stone slab teleports Aric deeper.
-- **Map 3 — The Dungeon**: The darkest area. The final boss — a legendary knight fully possessed — unleashes 3-hit combo chains and a dash-assassinate attack. Defeating him breaks the curse.
+- **Map 1 â€” The Village**: A peaceful coastal island, tutorial area. NPCs (green soldiers) guide the environment, no combat yet.
+- **Map 2 â€” The Ruins**: Corrupted red soldiers swarm the ruins. Defeating enemies reveals escaping corrupted souls, hinting at the curse's origin. A stone slab teleports Aric deeper.
+- **Map 3 â€” The Dungeon**: The darkest area. The final boss â€” a legendary knight fully possessed â€” unleashes 3-hit combo chains and a dash-assassinate attack. Defeating him breaks the curse.
 
 ## Gameplay
 
 - **8-directional WASD movement** with mouse-aimed attacks
-- **3-hit sword combo** — left-click, direction set by cursor position
-- **HP system** — health potions dropped by enemies or scattered on maps
-- **EXP & level-up** — EXP bar on HUD, each level-up raises the required EXP threshold by 20%
-- **Escalating difficulty** — enemy speed increases 40% in Map 3; boss has randomised patterns
+- **3-hit sword combo** â€” left-click, direction set by cursor position
+- **HP system** â€” health potions dropped by enemies or scattered on maps
+- **EXP & level-up** â€” EXP bar on HUD, each level-up raises the required EXP threshold by 20%
+- **Escalating difficulty** â€” enemy speed increases 40% in Map 3; boss has randomised patterns
 
 ## Enemies
 
-- **Basic Red Soldier** — melee, low HP, medium speed
-- **Shield Soldier** — melee, medium HP, slow
-- **Corrupted Warrior** — high HP, high damage, requires kiting tactics
-- **Final Boss (Possessed Knight)** — 3-hit combo + dash-assassinate, multiple times the HP of standard enemies
+- **Basic Red Soldier** â€” melee, low HP, medium speed
+- **Shield Soldier** â€” melee, medium HP, slow
+- **Corrupted Warrior** â€” high HP, high damage, requires kiting tactics
+- **Final Boss (Possessed Knight)** â€” 3-hit combo + dash-assassinate, multiple times the HP of standard enemies
 
 ## Technical Highlights
 
-- **Screen Shake** — Cinemachine Impulse on hit/attack, tuned amplitude and duration
-- **Floating Damage Text** — red (outgoing) / white (incoming) pixel-font numbers, fade-up animation
-- **Dynamic Ocean Audio** — volume scales as \`1 / (distance + 1)\` from nearest shoreline point, real-time spatial effect
-- **A\\* Pathfinding AI** — enemies navigate around obstacles and pursue the player; boss has partially randomised attack patterns
-- **Per-map BGM** — seamless-loop tracks: piano (village calm), dramatic (ruins combat), organ + echo (dungeon dread)
+- **Screen Shake** â€” Cinemachine Impulse on hit/attack, tuned amplitude and duration
+- **Floating Damage Text** â€” red (outgoing) / white (incoming) pixel-font numbers, fade-up animation
+- **Dynamic Ocean Audio** â€” volume scales as \`1 / (distance + 1)\` from nearest shoreline point, real-time spatial effect
+- **A\\* Pathfinding AI** â€” enemies navigate around obstacles and pursue the player; boss has partially randomised attack patterns
+- **Per-map BGM** â€” seamless-loop tracks: piano (village calm), dramatic (ruins combat), organ + echo (dungeon dread)
 
 ## Tech
 
@@ -373,16 +373,16 @@ Three acts, three maps:
     createdAt: "2025-09-01T00:00:00Z",
     updatedAt: "2025-09-30T00:00:00Z",
     media: [
-      { type: "image", url: "/tlh/gameplay-map1-village.png",       caption: "Map 1 — The Village: Aric explores the peaceful coastal island, no enemies yet" },
-      { type: "image", url: "/tlh/gameplay-map1-dock.png",          caption: "Map 2 — Dock area: Aric boards the ship departing for the Ruins, NPC and teleport stone visible" },
-      { type: "image", url: "/tlh/gameplay-map2-ruins-combat.png",  caption: "Map 2 — The Ruins: Aric mid-combat against corrupted enemies, floating damage numbers and EXP bar in HUD" },
-      { type: "image", url: "/tlh/gameplay-map2-ruins-fight.png",   caption: "Map 2 — The Ruins: Aric engaging a corrupted warrior, HP bar and level indicator on HUD" },
-      { type: "image", url: "/tlh/gameplay-map3-boss-fight.png",    caption: "Map 3 — The Dungeon: Final Boss (Possessed Knight) swinging his greatsword, floating damage and health potion on ground" },
-      { type: "image", url: "/tlh/design-map1-overview.png",        caption: "Village island — top-down level design overview of the full Map 1 layout" },
-      { type: "image", url: "/tlh/ui-main-menu.png",                caption: "Main Menu — epic dark-fantasy title art with chains, PLAY and QUIT" },
-      { type: "image", url: "/tlh/ui-pause-menu.png",               caption: "Pause Menu — Resume or Quit, triggered by ESC during gameplay" },
-      { type: "image", url: "/tlh/ui-victory.png",                  caption: "Victory Screen — \"Final Boss Defeated!\" displayed after breaking the curse" },
-      { type: "image", url: "/tlh/ui-game-over.png",                caption: "Game Over — Retry or return to Main Menu, boss looming in the background" },
+      { type: "image", url: "/tlh/gameplay-map1-village.png",       caption: "Map 1 â€” The Village: Aric explores the peaceful coastal island, no enemies yet" },
+      { type: "image", url: "/tlh/gameplay-map1-dock.png",          caption: "Map 2 â€” Dock area: Aric boards the ship departing for the Ruins, NPC and teleport stone visible" },
+      { type: "image", url: "/tlh/gameplay-map2-ruins-combat.png",  caption: "Map 2 â€” The Ruins: Aric mid-combat against corrupted enemies, floating damage numbers and EXP bar in HUD" },
+      { type: "image", url: "/tlh/gameplay-map2-ruins-fight.png",   caption: "Map 2 â€” The Ruins: Aric engaging a corrupted warrior, HP bar and level indicator on HUD" },
+      { type: "image", url: "/tlh/gameplay-map3-boss-fight.png",    caption: "Map 3 â€” The Dungeon: Final Boss (Possessed Knight) swinging his greatsword, floating damage and health potion on ground" },
+      { type: "image", url: "/tlh/design-map1-overview.png",        caption: "Village island â€” top-down level design overview of the full Map 1 layout" },
+      { type: "image", url: "/tlh/ui-main-menu.png",                caption: "Main Menu â€” epic dark-fantasy title art with chains, PLAY and QUIT" },
+      { type: "image", url: "/tlh/ui-pause-menu.png",               caption: "Pause Menu â€” Resume or Quit, triggered by ESC during gameplay" },
+      { type: "image", url: "/tlh/ui-victory.png",                  caption: "Victory Screen â€” \"Final Boss Defeated!\" displayed after breaking the curse" },
+      { type: "image", url: "/tlh/ui-game-over.png",                caption: "Game Over â€” Retry or return to Main Menu, boss looming in the background" },
     ] as MediaItem[],
   },
   {
@@ -390,35 +390,35 @@ Three acts, three maps:
     title: "Ashen's Blade",
     slug: "ashens-blade",
     description:
-      "A 2D side-scrolling action platformer built in Unity — play as a warrior chosen by an ancient stone, battle through grasslands, forests, and caves, master three combat skills, and take down the boss lurking at the end of each map.",
+      "A 2D side-scrolling action platformer built in Unity â€” play as a warrior chosen by an ancient stone, battle through grasslands, forests, and caves, master three combat skills, and take down the boss lurking at the end of each map.",
     content: `## Overview
 
 **Ashen's Blade** is a 2D side-scrolling action platformer developed solo as a Semester 1 student project at VTC Academy (Game Programming major). Inspired by classics like Hollow Knight and Celeste, the game focuses on tight platforming, responsive melee combat, and a multi-layered parallax world that evolves across three distinct environments.
 
 ## Story
 
-In the world of Elyndra, an ancient stone chooses its next champion. The player awakens in Ashwhisper Village and is greeted by Nyra — a mysterious cat NPC — with the words: *"Well well… looks like the stone has chosen you."* Armed with a blade, the warrior sets out through corrupted lands to defeat the darkness threatening each region.
+In the world of Elyndra, an ancient stone chooses its next champion. The player awakens in Ashwhisper Village and is greeted by Nyra â€” a mysterious cat NPC â€” with the words: *"Well wellâ€¦ looks like the stone has chosen you."* Armed with a blade, the warrior sets out through corrupted lands to defeat the darkness threatening each region.
 
 ## Gameplay
 
-- **Side-scrolling platformer** — run, jump, and traverse three maps: grasslands (Map 1), dark forest (Map 2), and deep cave/dungeon (Map 3)
-- **Melee combat** — directional sword attacks with combo potential
+- **Side-scrolling platformer** â€” run, jump, and traverse three maps: grasslands (Map 1), dark forest (Map 2), and deep cave/dungeon (Map 3)
+- **Melee combat** â€” directional sword attacks with combo potential
 - **Three active skills:**
-  - **Dash / Slide** — rapid horizontal burst for mobility and dodging
-  - **Heal** — restore HP mid-combat at the cost of skill charges
-  - **Power Burst** — explosive spiky aura dealing AoE damage
-- **Skill HUD** — bottom panel showing skill icons, charges, and HP bar (100 HP)
-- **NPC dialogue system** — click-triggered conversations that advance the story
-- **Boss encounters** — each map culminates in a boss fight with unique patterns
-- **Parallax background** — multi-layer scrolling at different speeds creates depth in every scene
+  - **Dash / Slide** â€” rapid horizontal burst for mobility and dodging
+  - **Heal** â€” restore HP mid-combat at the cost of skill charges
+  - **Power Burst** â€” explosive spiky aura dealing AoE damage
+- **Skill HUD** â€” bottom panel showing skill icons, charges, and HP bar (100 HP)
+- **NPC dialogue system** â€” click-triggered conversations that advance the story
+- **Boss encounters** â€” each map culminates in a boss fight with unique patterns
+- **Parallax background** â€” multi-layer scrolling at different speeds creates depth in every scene
 
 ## Systems
 
-- HP system — visual bar + damage numbers on hit; death triggers "You Died!" screen
-- Game Over ("You Died? Try Again?") — Yes restarts the map, No returns to Main Menu
-- Win Screen ("Thanks for playing") — shown after clearing the final boss in Map 3
-- Pause Menu (ESC) — Resume, Settings, Quit to Main Menu
-- Audio Settings — Master Volume, Music Volume, SFX Volume sliders
+- HP system â€” visual bar + damage numbers on hit; death triggers "You Died!" screen
+- Game Over ("You Died? Try Again?") â€” Yes restarts the map, No returns to Main Menu
+- Win Screen ("Thanks for playing") â€” shown after clearing the final boss in Map 3
+- Pause Menu (ESC) â€” Resume, Settings, Quit to Main Menu
+- Audio Settings â€” Master Volume, Music Volume, SFX Volume sliders
 
 ## Tech
 
@@ -442,18 +442,18 @@ In the world of Elyndra, an ancient stone chooses its next champion. The player 
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-05-24T00:00:00Z",
     media: [
-      { type: "video", url: "https://www.youtube.com/embed/qdf7tgF4WkQ", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo — gameplay, combat, skills, NPC dialogue, and UI" },
-      // ── Scenes ─────────────────────────────────────────────
+      { type: "video", url: "https://www.youtube.com/embed/qdf7tgF4WkQ", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo â€” gameplay, combat, skills, NPC dialogue, and UI" },
+      // â”€â”€ Scenes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       { type: "image", url: "/ashenblade/gameplay-map1-village.jpg",  caption: "Main Menu" },
-      { type: "image", url: "/ashenblade/gameplay-map2-cave.png",     caption: "Map 1 — Cave entrance: dark rocky cliffs with golden stone platforms, transition between worlds" },
-      { type: "image", url: "/ashenblade/gameplay-map1-hud.jpg",      caption: "Map 2 gameplay — HUD: HP bar (100/100), 3 skill slots (dash / heal / slash), area title banner" },
-      { type: "image", url: "/ashenblade/gameplay-npc-dialogue.jpg",  caption: "NPC dialogue — cat Nyra" },
-      { type: "image", url: "/ashenblade/gameplay-map3-dungeon.png",  caption: "Map 3 — Dungeon Scene" },
-      // ── Skills ─────────────────────────────────────────────
-      { type: "image", url: "/ashenblade/gameplay-combat-skill1.jpg", caption: "Skill 1 — Dash: rapid horizontal burst for dodging" },
-      { type: "image", url: "/ashenblade/gameplay-skill-burst.jpg",   caption: "Skill 3 — Heal: blue healing light VFX, restoring HP instantly" },
-      { type: "image", url: "/ashenblade/gameplay-skill3-slash.png",  caption: "Skill 4 — Blade Slash, red slash VFX, dealing critical damage" },
-      // ── UI ─────────────────────────────────────────────────
+      { type: "image", url: "/ashenblade/gameplay-map2-cave.png",     caption: "Map 1 â€” Cave entrance: dark rocky cliffs with golden stone platforms, transition between worlds" },
+      { type: "image", url: "/ashenblade/gameplay-map1-hud.jpg",      caption: "Map 2 gameplay â€” HUD: HP bar (100/100), 3 skill slots (dash / heal / slash), area title banner" },
+      { type: "image", url: "/ashenblade/gameplay-npc-dialogue.jpg",  caption: "NPC dialogue â€” cat Nyra" },
+      { type: "image", url: "/ashenblade/gameplay-map3-dungeon.png",  caption: "Map 3 â€” Dungeon Scene" },
+      // â”€â”€ Skills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      { type: "image", url: "/ashenblade/gameplay-combat-skill1.jpg", caption: "Skill 1 â€” Dash: rapid horizontal burst for dodging" },
+      { type: "image", url: "/ashenblade/gameplay-skill-burst.jpg",   caption: "Skill 3 â€” Heal: blue healing light VFX, restoring HP instantly" },
+      { type: "image", url: "/ashenblade/gameplay-skill3-slash.png",  caption: "Skill 4 â€” Blade Slash, red slash VFX, dealing critical damage" },
+      // â”€â”€ UI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       { type: "image", url: "/ashenblade/ui-pause-menu.jpg",          caption: "Pause Menu" },
       { type: "image", url: "/ashenblade/ui-you-died.jpg",            caption: "Game Over UI" },
       { type: "image", url: "/ashenblade/ui-win-screen.jpg",          caption: "Win Screen UI" },
@@ -464,34 +464,34 @@ In the world of Elyndra, an ancient stone chooses its next champion. The player 
     title: "Cock Escape",
     slug: "color-dice-3d",
     description:
-      "A 3D isometric mobile puzzle game built in Unity — players control a blocky character exploring rooms viewed from a rotating isometric camera, mixing colors to unlock doors and advance through each level before the timer runs out.",
+      "A 3D isometric mobile puzzle game built in Unity â€” players control a blocky character exploring rooms viewed from a rotating isometric camera, mixing colors to unlock doors and advance through each level before the timer runs out.",
     content: `## Overview
 
-**Cock Escape** is a 3D isometric mobile puzzle game developed as a team project at VTC Academy. The game is played in portrait mode on mobile, with the player controlling a voxel-style character inside a series of rooms viewed from a fixed isometric perspective. Each room is locked behind a door puzzle requiring the player to mix colors correctly — apply the right color combination to each slot on the door to trigger the opening animation and move on.
+**Cock Escape** is a 3D isometric mobile puzzle game developed as a team project at VTC Academy. The game is played in portrait mode on mobile, with the player controlling a voxel-style character inside a series of rooms viewed from a fixed isometric perspective. Each room is locked behind a door puzzle requiring the player to mix colors correctly â€” apply the right color combination to each slot on the door to trigger the opening animation and move on.
 
 ## Gameplay
 
-- **Isometric mobile view** — fixed isometric camera orbiting the room, rotated via on-screen left/right arrow buttons at the bottom corners of the screen
-- **Color mixing mechanic** — a bottom panel displays available color chips and a mixer showing color1 + color2 = result; players combine colors to produce the correct shade needed for each door slot
-- **Room-based progression** — each room contains a unique puzzle on a locked door; solving it triggers a door opening animation and loads the next room
-- **Two door types** — single-door (180° rotation) and double-door (multi-step DOTween sequence with barrier removal)
-- **Timer** — a live timer runs per room, displayed in the top HUD; final time is shown on the victory screen
-- **Inspection system** — players can examine objects and read paper clues placed around the room
-- **Inventory & item combining** — collectible items can be combined to solve supplementary environmental puzzles
-- **Fade transitions** — smooth fade-out/fade-in between room loads
+- **Isometric mobile view** â€” fixed isometric camera orbiting the room, rotated via on-screen left/right arrow buttons at the bottom corners of the screen
+- **Color mixing mechanic** â€” a bottom panel displays available color chips and a mixer showing color1 + color2 = result; players combine colors to produce the correct shade needed for each door slot
+- **Room-based progression** â€” each room contains a unique puzzle on a locked door; solving it triggers a door opening animation and loads the next room
+- **Two door types** â€” single-door (180Â° rotation) and double-door (multi-step DOTween sequence with barrier removal)
+- **Timer** â€” a live timer runs per room, displayed in the top HUD; final time is shown on the victory screen
+- **Inspection system** â€” players can examine objects and read paper clues placed around the room
+- **Inventory & item combining** â€” collectible items can be combined to solve supplementary environmental puzzles
+- **Fade transitions** â€” smooth fade-out/fade-in between room loads
 
 ## Camera System
 
-The camera orbits the room from one of four fixed isometric angles, snapping 90° per tap on the on-screen rotate buttons. The transition uses smooth Lerp/Slerp so the rotation feels fluid rather than instant. A separate **Focus Mode** moves the camera to a close-up position in front of a door or picture for interaction, then returns to the last orbit angle on exit. Wall visibility is driven by the current direction index so only the walls facing the camera render correctly at any angle.
+The camera orbits the room from one of four fixed isometric angles, snapping 90Â° per tap on the on-screen rotate buttons. The transition uses smooth Lerp/Slerp so the rotation feels fluid rather than instant. A separate **Focus Mode** moves the camera to a close-up position in front of a door or picture for interaction, then returns to the last orbit angle on exit. Wall visibility is driven by the current direction index so only the walls facing the camera render correctly at any angle.
 
 ## UI & Menus
 
-- **Main Menu** — animated voxel avatar with an idle loop and a hidden Easter egg interaction on tap
-- **In-game HUD** — live timer at the top centre, character avatar icon, camera rotate buttons at bottom corners, and the color mixing panel at the bottom
-- **Settings panel** — master volume, music, and SFX sliders with toggle icons
-- **Victory panel** — displays final clear time and a next-room button
-- **Failed panel** — triggered when all door slots are filled but the color combination is incorrect
-- **Scene transitions** — FadeManager handles fade-out/fade-in callbacks between Menu and Game scenes
+- **Main Menu** â€” animated voxel avatar with an idle loop and a hidden Easter egg interaction on tap
+- **In-game HUD** â€” live timer at the top centre, character avatar icon, camera rotate buttons at bottom corners, and the color mixing panel at the bottom
+- **Settings panel** â€” master volume, music, and SFX sliders with toggle icons
+- **Victory panel** â€” displays final clear time and a next-room button
+- **Failed panel** â€” triggered when all door slots are filled but the color combination is incorrect
+- **Scene transitions** â€” FadeManager handles fade-out/fade-in callbacks between Menu and Game scenes
 
 ## Tech
 
@@ -503,13 +503,13 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 ## My Contributions
 
 ### Camera System
-- Implemented the 4-angle isometric orbit camera with smooth Lerp/Slerp rotation, snapping 90° per input using a direction index and target yaw offset
+- Implemented the 4-angle isometric orbit camera with smooth Lerp/Slerp rotation, snapping 90Â° per input using a direction index and target yaw offset
 - Built the Focus Mode system transitioning the camera to door or picture focus points and returning smoothly to the correct orbit angle on exit
 - Wired wall visibility updates to the current direction index so only the camera-facing wall renders at each angle
 
 ### UI & Menu
 - Set up the full Main Menu scene including layout, animated avatar idle loop, Easter egg tap interaction, and quit logic
-- Implemented all in-game UI panels — Settings, Victory, and Failed — managed via UIManager singleton
+- Implemented all in-game UI panels â€” Settings, Victory, and Failed â€” managed via UIManager singleton
 - Integrated the FadeManager fade-out/fade-in callback system into the Next Room and Replay flows
 - Connected audio settings sliders to AudioSettingsManager and wired sound toggle icon states`,
     category: "game",
@@ -522,7 +522,7 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
     year: "2025",
     role: "Game Developer",
     team: "5-person team",
-    duration: null,
+    duration: undefined,
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-01-01T00:00:00Z",
     media: [] as MediaItem[],
@@ -532,17 +532,17 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
     title: "URL Shortener System",
     slug: "url-shortener-system",
     description:
-      "A scalable URL-shortening service built on a .NET 8 microservices architecture — featuring an Ocelot API Gateway, Redis distributed caching, RabbitMQ async messaging, JWT auth, and a React frontend, all orchestrated with Docker Compose.",
+      "A scalable URL-shortening service built on a .NET 8 microservices architecture â€” featuring an Ocelot API Gateway, Redis distributed caching, RabbitMQ async messaging, JWT auth, and a React frontend, all orchestrated with Docker Compose.",
     content: `## Overview
 
-A cloud-native URL shortening platform developed as a team coursework project (AMD201 — Greenwich University). The system follows a microservices pattern with two independent backend services communicating asynchronously, fronted by a single API Gateway and backed by SQL Server, Redis, and RabbitMQ — all containerised with Docker.
+A cloud-native URL shortening platform developed as a team coursework project (AMD201 â€” Greenwich University). The system follows a microservices pattern with two independent backend services communicating asynchronously, fronted by a single API Gateway and backed by SQL Server, Redis, and RabbitMQ â€” all containerised with Docker.
 
 ## Architecture
 
-- **API Gateway (Ocelot)** — single entry point routing all client requests to the correct downstream service
-- **URL Service** — handles URL creation, Base62 short-code generation, 302 redirects, and Redis caching for fast lookups
-- **User Service** — handles registration, login, JWT issuance, and publishes user events to RabbitMQ
-- **Async Communication** — URL Service consumes RabbitMQ events from User Service to keep data consistent without tight coupling
+- **API Gateway (Ocelot)** â€” single entry point routing all client requests to the correct downstream service
+- **URL Service** â€” handles URL creation, Base62 short-code generation, 302 redirects, and Redis caching for fast lookups
+- **User Service** â€” handles registration, login, JWT issuance, and publishes user events to RabbitMQ
+- **Async Communication** â€” URL Service consumes RabbitMQ events from User Service to keep data consistent without tight coupling
 
 ## Features
 
@@ -559,7 +559,7 @@ A cloud-native URL shortening platform developed as a team coursework project (A
 
 ### Infrastructure
 - Ocelot API Gateway as the unified entry point
-- SQL Server (separate databases per service — URLDb, UserDb)
+- SQL Server (separate databases per service â€” URLDb, UserDb)
 - Redis for distributed caching
 - RabbitMQ for async inter-service messaging
 - Multi-stage Dockerfiles for optimised production images
@@ -597,23 +597,23 @@ A cloud-native URL shortening platform developed as a team coursework project (A
     year: "2025",
     role: "Infrastructure & URL Service",
     team: "3-person team",
-    duration: null,
+    duration: undefined,
     createdAt: "2025-01-01T00:00:00Z",
     updatedAt: "2025-01-01T00:00:00Z",
     media: [
       { type: "image", url: "/urlshortener/01-register.png",          caption: "Register Page" },
       { type: "image", url: "/urlshortener/02-shorten-dashboard.png", caption: "Shorten URL Dashboard" },
       { type: "image", url: "/urlshortener/03-list.png",              caption: "My Links List" },
-      { type: "image", url: "/urlshortener/04-admin-panel.png",       caption: "Admin Panel — View All Users' Links" },
-      { type: "image", url: "/urlshortener/05-url-shortening-api.png",caption: "API Testing — URL Shortening (Postman)" },
-      { type: "image", url: "/urlshortener/06-get-user-urls-api.png", caption: "API Testing — Get User URLs (Postman)" },
-      { type: "image", url: "/urlshortener/07-shorten-url-flow.png",  caption: "Functional Test — Shorten URL Flow" },
-      { type: "image", url: "/urlshortener/08-admin-view-links.png",  caption: "Functional Test — Admin View User Links" },
+      { type: "image", url: "/urlshortener/04-admin-panel.png",       caption: "Admin Panel â€” View All Users' Links" },
+      { type: "image", url: "/urlshortener/05-url-shortening-api.png",caption: "API Testing â€” URL Shortening (Postman)" },
+      { type: "image", url: "/urlshortener/06-get-user-urls-api.png", caption: "API Testing â€” Get User URLs (Postman)" },
+      { type: "image", url: "/urlshortener/07-shorten-url-flow.png",  caption: "Functional Test â€” Shorten URL Flow" },
+      { type: "image", url: "/urlshortener/08-admin-view-links.png",  caption: "Functional Test â€” Admin View User Links" },
     ] as MediaItem[],
   },
 ];
 
-// ── Blog ──────────────────────────────────────────────────
+// â”€â”€ Blog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export const mockBlogPosts: BlogPostListItem[] = [
   {
@@ -621,7 +621,7 @@ export const mockBlogPosts: BlogPostListItem[] = [
     title: "Building Wildlife AI for Eden Isle",
     slug: "wildlife-ai-eden-isle",
     summary:
-      "How I designed the animal AI system for our multiplayer survival horror game — a shared state machine handling FOV detection, hearing, day/night behaviour shifts, and species-specific logic for wolves, bears, deer, and rabbits.",
+      "How I designed the animal AI system for our multiplayer survival horror game â€” a shared state machine handling FOV detection, hearing, day/night behaviour shifts, and species-specific logic for wolves, bears, deer, and rabbits.",
     tags: ["Unity", "C#", "AI", "Game Dev", "NavMesh"],
     author: "Nguyen Hoang Gia Bao",
     published: true,
@@ -634,7 +634,7 @@ export const mockBlogPosts: BlogPostListItem[] = [
     title: "Syncing Tree Chopping Across Clients with Photon Fusion",
     slug: "tree-sync-photon-fusion",
     summary:
-      "A deep dive into one of the trickiest systems in Eden Isle — making a tree fall the same way on every client, spawning the right number of logs, and keeping late-joining players in sync without re-running the whole world.",
+      "A deep dive into one of the trickiest systems in Eden Isle â€” making a tree fall the same way on every client, spawning the right number of logs, and keeping late-joining players in sync without re-running the whole world.",
     tags: ["Unity", "C#", "Photon Fusion", "Multiplayer", "Game Dev"],
     author: "Nguyen Hoang Gia Bao",
     published: true,
@@ -647,7 +647,7 @@ export const mockBlogPosts: BlogPostListItem[] = [
     title: "Game Feel in 2D: What I Learned from The Last Homestead",
     slug: "game-feel-last-homestead",
     summary:
-      "Screen shake, floating damage numbers, dynamic spatial audio, and A* pathfinding — the small systems that made The Last Homestead feel like a real game instead of a student project.",
+      "Screen shake, floating damage numbers, dynamic spatial audio, and A* pathfinding â€” the small systems that made The Last Homestead feel like a real game instead of a student project.",
     tags: ["Unity", "C#", "Game Feel", "A* Pathfinding"],
     author: "Nguyen Hoang Gia Bao",
     published: true,
@@ -660,7 +660,7 @@ export const mockBlogPosts: BlogPostListItem[] = [
     title: "Real-time Messaging Architecture in Verdi",
     slug: "realtime-messaging-verdi",
     summary:
-      "How I structured the Socket.io event layer in Verdi to handle direct messages, group chats, read receipts, and live notifications — without race conditions or duplicate messages.",
+      "How I structured the Socket.io event layer in Verdi to handle direct messages, group chats, read receipts, and live notifications â€” without race conditions or duplicate messages.",
     tags: ["Node.js", "Socket.io", "TypeScript", "Web Dev", "Architecture"],
     author: "Nguyen Hoang Gia Bao",
     published: true,
@@ -673,9 +673,9 @@ export const mockBlogPosts: BlogPostListItem[] = [
 export const mockBlogContent: Record<string, string> = {
   "wildlife-ai-eden-isle": `## The Problem
 
-Eden Isle is a 1–4 player survival horror co-op set on an open-world island. The world needed to feel alive — passive animals fleeing, predators hunting, and behaviour shifting as night fell. I was responsible for the entire animal AI system, and the first question was architecture: one class per species, or a shared base everyone inherits from?
+Eden Isle is a 1â€“4 player survival horror co-op set on an open-world island. The world needed to feel alive â€” passive animals fleeing, predators hunting, and behaviour shifting as night fell. I was responsible for the entire animal AI system, and the first question was architecture: one class per species, or a shared base everyone inherits from?
 
-The answer was a shared base. All five species — wolf, bear, deer, rabbit, toucan — share the same core state machine and detection logic. Species-specific behaviour is layered on top through subclasses.
+The answer was a shared base. All five species â€” wolf, bear, deer, rabbit, toucan â€” share the same core state machine and detection logic. Species-specific behaviour is layered on top through subclasses.
 
 ## The Core State Machine
 
@@ -687,7 +687,7 @@ public enum AnimalState { Wander, Suspect, Flee, Dead }
 
 Transitions are driven by two detection channels: vision and hearing.
 
-**Vision** uses a cone check — if the player is within detection range and inside the FOV angle, a raycast confirms line of sight. Range and angle values are exposed as fields so each species gets its own sensory profile.
+**Vision** uses a cone check â€” if the player is within detection range and inside the FOV angle, a raycast confirms line of sight. Range and angle values are exposed as fields so each species gets its own sensory profile.
 
 **Hearing** uses a world sound event system. When the player moves, their footstep component fires a sound event with a position and intensity value. Animals within range pick it up and enter Suspect state. Crouch-walking produces a quieter event; sprinting produces a louder one. This gives players something to manage.
 
@@ -714,15 +714,15 @@ Wolves at night have increased vision range, higher hearing sensitivity, and a f
 
 ## Aggressive Animals: the Combat Pipeline
 
-Wolves and bears extend the base class with a four-phase combat pipeline: **Chase → PrepareAttack → BurstAttack → Recovery**.
+Wolves and bears extend the base class with a four-phase combat pipeline: **Chase â†’ PrepareAttack â†’ BurstAttack â†’ Recovery**.
 
-PrepareAttack is a brief telegraph before the actual lunge — long enough for the player to dodge, short enough to feel dangerous. BurstAttack moves the agent forward at high speed, applies damage on contact, then locks into Recovery before the next cycle can begin.
+PrepareAttack is a brief telegraph before the actual lunge â€” long enough for the player to dodge, short enough to feel dangerous. BurstAttack moves the agent forward at high speed, applies damage on contact, then locks into Recovery before the next cycle can begin.
 
 If the animal takes damage during any phase, the pipeline aborts and re-enters Suspect state. This prevents damage-tanking and forces the player to manage spacing.
 
 ## Passive Animals
 
-Deer uses the same base class but with no aggressive extension. Its Flee state is tuned for high speed and long duration. Rabbit groups use a simple neighbour check — when one rabbit enters Flee, nearby rabbits check for the alert and join in, producing a scatter effect without any explicit coordination logic. Toucan has an idle perch pattern layered on top of Wander, giving the forest ambient life even when the player isn't nearby.
+Deer uses the same base class but with no aggressive extension. Its Flee state is tuned for high speed and long duration. Rabbit groups use a simple neighbour check â€” when one rabbit enters Flee, nearby rabbits check for the alert and join in, producing a scatter effect without any explicit coordination logic. Toucan has an idle perch pattern layered on top of Wander, giving the forest ambient life even when the player isn't nearby.
 
 ## What I'd Do Differently
 
@@ -730,13 +730,13 @@ The day/night multiplier system works but is brittle. A data-driven approach usi
 
   "tree-sync-photon-fusion": `## The Problem
 
-Eden Isle has a tree-chopping system. Players hit trees with an axe, the tree falls, logs spawn, and those logs are collectible resources. Simple enough in a single-player game. In a 4-player co-op running on Photon Fusion, every step of that process needs to stay consistent across all clients — including a player who joins mid-session after trees have already been cut.
+Eden Isle has a tree-chopping system. Players hit trees with an axe, the tree falls, logs spawn, and those logs are collectible resources. Simple enough in a single-player game. In a 4-player co-op running on Photon Fusion, every step of that process needs to stay consistent across all clients â€” including a player who joins mid-session after trees have already been cut.
 
 ## Fast Tree Detection
 
 The island has hundreds of terrain trees placed by Unity's terrain system. When a player lands a hit, we need to find the nearest tree quickly. A linear scan every frame isn't viable.
 
-At startup, a TreeManager builds a spatial grid — the island is divided into cells, and each terrain tree is registered into the appropriate cell based on its world position. At hit time, we check only the trees in the cell containing the hit point and its neighbours. The lookup goes from O(n) to roughly O(1) for typical tree density.
+At startup, a TreeManager builds a spatial grid â€” the island is divided into cells, and each terrain tree is registered into the appropriate cell based on its world position. At hit time, we check only the trees in the cell containing the hit point and its neighbours. The lookup goes from O(n) to roughly O(1) for typical tree density.
 
 \`\`\`csharp
 public TerrainTree GetNearestTree(Vector3 worldPos) {
@@ -750,15 +750,15 @@ public TerrainTree GetNearestTree(Vector3 worldPos) {
 
 ## The Fall Animation Problem
 
-Unity terrain trees can't be animated directly — they're static instances managed by the terrain system. The solution is a proxy object.
+Unity terrain trees can't be animated directly â€” they're static instances managed by the terrain system. The solution is a proxy object.
 
-When the host authorises a chop, it hides the terrain tree and spawns a matching proxy mesh at the same position. The proxy then rotates 90° around the hit axis using an easing curve over about 1.5 seconds, landing flat on the ground. Dust particles fire on impact. To everyone watching, a tree fell.
+When the host authorises a chop, it hides the terrain tree and spawns a matching proxy mesh at the same position. The proxy then rotates 90Â° around the hit axis using an easing curve over about 1.5 seconds, landing flat on the ground. Dust particles fire on impact. To everyone watching, a tree fell.
 
 The proxy rotation runs on all clients simultaneously from the same network tick, so the animation stays in sync without streaming position data every frame.
 
 ## Log Spawning
 
-Log count is derived from tree height — taller trees drop more logs. Each log position is determined by a raycast from a point along the fallen trunk down to the terrain surface, accounting for slope. Logs are then network-spawned as collectible objects owned by the host.
+Log count is derived from tree height â€” taller trees drop more logs. Each log position is determined by a raycast from a point along the fallen trunk down to the terrain surface, accounting for slope. Logs are then network-spawned as collectible objects owned by the host.
 
 \`\`\`csharp
 int logCount = Mathf.RoundToInt(treeHeight * logsPerUnit);
@@ -770,7 +770,7 @@ for (int i = 0; i < logCount; i++) {
 
 ## Late-Join Sync
 
-The trickiest part. When a new player connects mid-session, they need to see the world as it currently is — without triggering fall animations for trees that fell twenty minutes ago.
+The trickiest part. When a new player connects mid-session, they need to see the world as it currently is â€” without triggering fall animations for trees that fell twenty minutes ago.
 
 The host maintains a list of felled tree indices. On player join, that list is sent as part of the initial state sync. The joining client hides those terrain trees and places flat proxy meshes in their final position, skipping the animation entirely. From the new player's perspective, the trees were always down.
 
@@ -780,13 +780,13 @@ Multiplayer forces you to be explicit about every assumption you'd normally leav
 
   "game-feel-last-homestead": `## What is Game Feel?
 
-Game feel is the difference between a prototype and a game. It's the screen shake when a sword connects, the number floating up showing exactly how much damage you dealt, the way the background music shifts as you go deeper into the dungeon. None of these things affect the core loop — but without them, the game feels hollow.
+Game feel is the difference between a prototype and a game. It's the screen shake when a sword connects, the number floating up showing exactly how much damage you dealt, the way the background music shifts as you go deeper into the dungeon. None of these things affect the core loop â€” but without them, the game feels hollow.
 
 The Last Homestead was a solo one-month project, and most of that month went into these systems. Here's what I built and why.
 
 ## Screen Shake with Cinemachine Impulse
 
-The naive approach to screen shake is translating the camera by a random offset each frame. It works, but it looks cheap — the shake has no weight or direction.
+The naive approach to screen shake is translating the camera by a random offset each frame. It works, but it looks cheap â€” the shake has no weight or direction.
 
 Cinemachine Impulse is better. You define an impulse source on the hitting object and a listener on the virtual camera. When the player attacks or takes damage, the source fires with a defined force and duration. The camera responds with a physically-based decay curve that feels like recoil rather than noise.
 
@@ -810,7 +810,7 @@ The tricky part is preventing overlap when hits land in quick succession. Each n
 
 ## Dynamic Ocean Audio
 
-Map 1 takes place on a coastal island. The ocean should be audible but not constant — it should get louder as you approach the shore and quieter as you move inland.
+Map 1 takes place on a coastal island. The ocean should be audible but not constant â€” it should get louder as you approach the shore and quieter as you move inland.
 
 Rather than placing multiple audio sources along the coast, I used a single source and a distance function. At runtime, the audio system samples the nearest point on a predefined shoreline path and scales the volume inversely with that distance:
 
@@ -837,7 +837,7 @@ None of these systems are complicated. A screen shake is twenty lines. Floating 
 
 Verdi is a real-time social chat application built solo over about two and a half months. The backend runs on Node.js with Express, MongoDB for persistence, and Socket.io for the real-time layer. The frontend is React 19 with Zustand managing client state.
 
-The messaging system had to handle direct messages, group chats, read receipts, live notifications, and reconnection — without duplicate messages or race conditions. Here's how I structured it.
+The messaging system had to handle direct messages, group chats, read receipts, live notifications, and reconnection â€” without duplicate messages or race conditions. Here's how I structured it.
 
 ## Room-Based Architecture
 
@@ -854,13 +854,13 @@ socket.on('send_message', async (data) => {
 });
 \`\`\`
 
-This keeps the server simple — it doesn't need to track which user is in which conversation at the socket level. The room handles delivery.
+This keeps the server simple â€” it doesn't need to track which user is in which conversation at the socket level. The room handles delivery.
 
 ## Read Receipts
 
 Read state is tracked per-user per-conversation in MongoDB. When a user opens a conversation, the client emits a \`mark_read\` event. The server updates the database and emits a \`conversation_read\` event back to all room members, so other participants see the "seen" indicator update in real time.
 
-The client only emits \`mark_read\` when the conversation is actually visible — not when it's in the background. This prevents marking messages as read when the user hasn't actually seen them.
+The client only emits \`mark_read\` when the conversation is actually visible â€” not when it's in the background. This prevents marking messages as read when the user hasn't actually seen them.
 
 ## Preventing Duplicate Messages
 
@@ -884,7 +884,7 @@ socket.on('new_message', (message) => {
 
 ## Live Notifications
 
-Users receive notifications for new messages in conversations they're not currently viewing, and for incoming friend requests. These are delivered via a separate \`user:{id}\` room each user joins on connection — a personal channel for events not tied to a specific conversation.
+Users receive notifications for new messages in conversations they're not currently viewing, and for incoming friend requests. These are delivered via a separate \`user:{id}\` room each user joins on connection â€” a personal channel for events not tied to a specific conversation.
 
 \`\`\`typescript
 socket.on('connect', () => {
@@ -900,17 +900,17 @@ Socket.io handles reconnection automatically, but room membership is lost on dis
 
 ## What I'd Do Differently
 
-The current notification system is fire-and-forget — if the client is offline when a notification fires, it's lost. A proper implementation would persist unread notifications to the database and deliver them on the next connection. That's the most obvious gap in the current architecture.`,
+The current notification system is fire-and-forget â€” if the client is offline when a notification fires, it's lost. A proper implementation would persist unread notifications to the database and deliver them on the next connection. That's the most obvious gap in the current architecture.`,
 };
 
-// ── Resume ────────────────────────────────────────────────
+// â”€â”€ Resume â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export const mockJobs: Job[] = [];
 
 export const mockEducation: Education[] = [
   {
     id: 1,
-    school: "University of Greenwich — Computing",
+    school: "University of Greenwich â€” Computing",
     summary:
       "Pursuing a Bachelor's in Computing focused on software engineering, algorithms, and systems design. Using the theoretical foundation here to better understand the engineering behind games, from data structures powering game logic to the network architecture underlying multiplayer systems. Every module gets applied to something I'm actively building.",
     content: "",
@@ -923,7 +923,7 @@ export const mockEducation: Education[] = [
   },
   {
     id: 2,
-    school: "VTC Academy — Game Development",
+    school: "VTC Academy â€” Game Development",
     summary:
       "Diploma in Game Programming (expected Nov 2026), focused entirely on building games with Unity and C#. Completed multiple projects solo and in teams, spanning 2D side-scrollers, top-down ARPGs, and a first-person multiplayer survival horror game. Built gameplay systems including NavMesh AI, Photon Fusion multiplayer networking, combat mechanics, and full production pipelines taking a game from concept to playable build.",
     content: "",
@@ -935,3 +935,4 @@ export const mockEducation: Education[] = [
     updatedAt: "2024-01-01T00:00:00Z",
   },
 ];
+
