@@ -1,0 +1,18 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Backend API URL — used in Server Components
+  env: {
+    NEXT_PUBLIC_API_URL:
+      process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000",
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;

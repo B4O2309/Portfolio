@@ -4,32 +4,28 @@ interface SectionHeaderProps {
   description?: string;
 }
 
-export function SectionHeader({
-  eyebrow,
-  title,
-  description,
-}: SectionHeaderProps) {
+export function SectionHeader({ eyebrow, title, description }: SectionHeaderProps) {
   return (
     <div
-      className="relative border-b py-16 grid-bg overflow-hidden"
-      style={{ borderColor: "#2a1818" }}
+      className="relative border-b py-20 line-grid overflow-hidden"
+      style={{ borderColor: "var(--border-md)" }}
     >
-      {/* Red corner glow */}
+      {/* Primary glow */}
       <div
-        className="absolute top-0 right-0 w-80 h-80 pointer-events-none"
+        className="absolute top-0 right-0 w-96 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at top right, rgba(204,34,34,0.14) 0%, transparent 60%)",
+            "radial-gradient(ellipse at top right, rgba(56,189,248,0.1) 0%, transparent 60%)",
         }}
       />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-5 h-px" style={{ background: "#cc2222" }} />
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
           <span
-            className="text-[10px] tracking-[0.3em] text-[#cc2222]"
-            style={{ fontFamily: "DM Mono, monospace" }}
+            className="text-[10px] tracking-[0.3em] uppercase"
+            style={{ color: "var(--primary)", fontFamily: "var(--font-mono)" }}
           >
             {eyebrow}
           </span>
@@ -37,20 +33,16 @@ export function SectionHeader({
 
         {/* Title */}
         <h1
-          className="text-[clamp(48px,8vw,100px)] leading-[0.9] mb-4"
-          style={{
-            fontFamily: "Bebas Neue, sans-serif",
-            color: "#ede8e3",
-          }}
+          className="text-[clamp(52px,8vw,108px)] leading-[0.92] mb-5"
+          style={{ fontFamily: "var(--font-display)", color: "var(--text)" }}
         >
           {title}
         </h1>
 
-        {/* Description */}
         {description && (
           <p
-            className="text-sm text-[#7a6e6e] max-w-lg"
-            style={{ fontFamily: "DM Mono, monospace" }}
+            className="text-sm leading-relaxed max-w-xl"
+            style={{ color: "var(--text-2)", fontFamily: "var(--font-mono)" }}
           >
             {description}
           </p>

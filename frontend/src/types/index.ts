@@ -5,6 +5,14 @@ export interface ApiResponse<T> {
   error?: string;
 }
 
+// ── Media item ────────────────────────────────────────────
+export interface MediaItem {
+  type: "image" | "video";
+  url: string;
+  thumbnail?: string; // for video thumbnails
+  caption?: string;
+}
+
 // ── Project ───────────────────────────────────────────────
 export interface Project {
   id: number;
@@ -20,6 +28,13 @@ export interface Project {
   order: number;
   createdAt: string;
   updatedAt: string;
+  // Extended fields for rich display (populated by mock data)
+  category?: 'web' | 'game';
+  year?: string;
+  role?: string;
+  team?: string;
+  duration?: string;
+  media?: MediaItem[];
 }
 
 // ── Blog ──────────────────────────────────────────────────

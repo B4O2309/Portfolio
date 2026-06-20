@@ -1,0 +1,90 @@
+// This is your Prisma schema file.
+// Run: npx prisma migrate dev --name init
+// Then: npm run db:seed
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String
+  content     String   @default("")
+  tags        String[] // PostgreSQL array
+  github      String?
+  liveUrl     String?
+  image       String?
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  summary   String
+  content   String
+  tags      String[]
+  author    String   @default("Cole Ashby")
+  published Boolean  @default(true)
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("blog_posts")
+}
+
+model Job {
+  id        Int      @id @default(autoincrement())
+  jobTitle  String
+  company   String
+  location  String
+  summary   String
+  content   String   @default("")
+  tags      String[]
+  startDate String   // "2023-03" format for flexibility
+  endDate   String?  // null = present
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("jobs")
+}
+
+model Education {
+  id        Int      @id @default(autoincrement())
+  school    String
+  summary   String
+  content   String   @default("")
+  tags      String[]
+  startDate String
+  endDate   String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("education")
+}
+
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}
