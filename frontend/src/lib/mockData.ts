@@ -546,17 +546,13 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
 - Designed Warrior character and bosses Darian and Sir Kael (lore, visual direction, attack patterns)
 
-- Created loading screens, project report, game trailer, and presentation slides
+- Designed loading screens, project report, game trailer, and presentation slides
 
 
 
 ### Art & Environment — High-fidelity Environments
 
-- Designed and built Elyndra Village, The Dungeon, and The Inner Abyss scenes
-
-- Created enemy sprites: Skeleton, Bat, and Necromancer
-
-- Animated skill VFX and combat effects for the Warrior character
+- Designed and built Elyndra Village, The Dungeon, and The Inner Abyss scenes using pre-existing assets
 
 
 
@@ -582,7 +578,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
     year: "2025",
 
-    role: "Game Developer & Designer",
+    role: "Game Designer",
 
     team: "2-person team",
 
@@ -978,7 +974,7 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
 - **In-game HUD** — live timer at the top centre, character avatar icon, camera rotate buttons at bottom corners, and the color mixing panel at the bottom
 
-- **Settings panel** — audio toggles for master volume, music, and SFX
+- **Settings panel** — two on/off toggles for Music and SFX
 
 - **Victory panel** — displays final clear time
 
@@ -1024,7 +1020,7 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
 - Integrated the FadeManager fade-out/fade-in callback system into the scene transition flow
 
-- Connected audio toggle buttons to AudioSettingsManager and wired sound toggle icon states`,
+- Connected Music and SFX on/off toggle buttons to AudioSettingsManager and wired their icon states`,
 
     category: "game",
 
