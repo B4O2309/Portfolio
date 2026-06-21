@@ -344,6 +344,8 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
     image: "/edenisle/InGame.jpg",
 
+    liveUrl: "https://b4o2309.itch.io/eden-isle",
+
     featured: true,
 
     order: 2,
@@ -572,7 +574,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
     github: "",
 
-    liveUrl: null,
+    liveUrl: "https://b4o2309.itch.io/the-world-rift-shadow-of-chaos",
 
     image: "/worldrift/06-combat-warrior.jpg",
 
@@ -718,7 +720,7 @@ In the world of Elyndra, an ancient stone chooses its next champion. The player 
 
     github: null,
 
-    liveUrl: null,
+    liveUrl: "https://b4o2309.itch.io/ashens-blade",
 
     image: "/ashenblade/gameplay-combat-skill1.jpg",
 
