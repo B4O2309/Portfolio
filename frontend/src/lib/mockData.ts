@@ -974,13 +974,13 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
 
 
-- **Main Menu** — animated voxel avatar with an idle loop and a hidden Easter egg interaction on tap
+- **Main Menu** — static layout with play and quit logic
 
 - **In-game HUD** — live timer at the top centre, character avatar icon, camera rotate buttons at bottom corners, and the color mixing panel at the bottom
 
-- **Settings panel** — master volume, music, and SFX sliders with toggle icons
+- **Settings panel** — audio toggles for master volume, music, and SFX
 
-- **Victory panel** — displays final clear time and a next-room button
+- **Victory panel** — displays final clear time
 
 - **Failed panel** — triggered when all door slots are filled but the color combination is incorrect
 
@@ -1018,13 +1018,13 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
 ### UI & Menu
 
-- Set up the full Main Menu scene including layout, animated avatar idle loop, Easter egg tap interaction, and quit logic
+- Set up the full Main Menu scene including layout and quit logic
 
 - Implemented all in-game UI panels — Settings, Victory, and Failed — managed via UIManager singleton
 
-- Integrated the FadeManager fade-out/fade-in callback system into the Next Room and Replay flows
+- Integrated the FadeManager fade-out/fade-in callback system into the scene transition flow
 
-- Connected audio settings sliders to AudioSettingsManager and wired sound toggle icon states`,
+- Connected audio toggle buttons to AudioSettingsManager and wired sound toggle icon states`,
 
     category: "game",
 

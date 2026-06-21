@@ -145,8 +145,9 @@ export default function HomePage() {
                   VIEW MY WORK
                   <ArrowRight size={13} className="transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
-                <Link
-                  href="/resume"
+                <a
+                  href="/CV_NguyenHoangGiaBao_UnityGameDeveloper.pdf"
+                  download
                   className="inline-flex items-center gap-2 px-7 py-3.5 text-[11px] tracking-[0.15em] font-bold border transition-all duration-200 hover:border-[var(--red)] hover:text-[var(--text)]"
                   style={{
                     borderColor: "var(--border-md)",
@@ -155,7 +156,7 @@ export default function HomePage() {
                   }}
                 >
                   DOWNLOAD CV
-                </Link>
+                </a>
               </div>
 
               {/* Socials */}

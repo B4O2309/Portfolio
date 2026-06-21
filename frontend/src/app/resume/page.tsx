@@ -48,7 +48,8 @@ export default function ResumePage() {
             </div>
 
             <a
-              href="#"
+              href="/CV_NguyenHoangGiaBao_UnityGameDeveloper.pdf"
+              download
               className="flex items-center gap-2 px-5 py-3 border text-[11px] tracking-[0.12em] transition-all duration-200 hover:border-[var(--primary)] hover:text-[var(--primary)] mt-4"
               style={{
                 fontFamily: "var(--font-mono)",
