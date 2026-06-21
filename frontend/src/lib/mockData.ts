@@ -340,11 +340,9 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
     github: "",
 
-    liveUrl: null,
+    liveUrl: "https://b4o2309.itch.io/eden-isle",
 
     image: "/edenisle/InGame.jpg",
-
-    liveUrl: "https://b4o2309.itch.io/eden-isle",
 
     featured: true,
 
