@@ -17,8 +17,9 @@ export function ProjectsGrid({ projects, initialTab }: Props) {
   const [tab, setTab] = useState<"web" | "game" | "all">(initialTab);
   const [modalProject, setModalProject] = useState<Project | null>(null);
 
-  const filtered =
-    tab === "all" ? projects : projects.filter((p) => p.category === tab);
+  const filtered = (tab === "all" ? projects : projects.filter((p) => p.category === tab))
+    .slice()
+    .sort((a, b) => Number(b.featured) - Number(a.featured));
 
   const tabs = [
     { key: "web" as const,  label: "Web Apps",     icon: Zap,         color: "var(--web)",  bg: "rgba(255,122,0,0.07)",  border: "rgba(255,122,0,0.35)" },
@@ -97,7 +98,18 @@ export function ProjectsGrid({ projects, initialTab }: Props) {
             <article
               key={project.id}
               className={`card group flex flex-col overflow-hidden ${isWeb ? "card-web" : "card-game"}`}
+              style={project.featured ? {
+                borderColor: "rgba(201,169,110,0.55)",
+                boxShadow: "0 0 0 1px rgba(201,169,110,0.18), 0 4px 32px rgba(201,169,110,0.08)",
+              } : undefined}
             >
+              {/* Featured top bar */}
+              {project.featured && (
+                <div
+                  className="h-[2px] w-full shrink-0"
+                  style={{ background: "linear-gradient(to right, rgba(201,169,110,0.8), rgba(201,169,110,0.2), transparent)" }}
+                />
+              )}
               {/* Cover image */}
               <div className="relative h-52 overflow-hidden shrink-0" style={{ background: "var(--bg-2)" }}>
                 <Link href={`/projects/${project.slug}`} className="block absolute inset-0">

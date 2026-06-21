@@ -92,7 +92,18 @@ export function FeaturedProjectsTabs({ webProjects, gameProjects }: Props) {
             <article
               key={project.id}
               className={`card group flex flex-col h-full overflow-hidden ${isWeb ? "card-web" : "card-game"}`}
+              style={project.featured ? {
+                borderColor: "rgba(201,169,110,0.55)",
+                boxShadow: "0 0 0 1px rgba(201,169,110,0.18), 0 4px 32px rgba(201,169,110,0.08)",
+              } : undefined}
             >
+              {/* Featured top bar */}
+              {project.featured && (
+                <div
+                  className="h-[2px] w-full shrink-0"
+                  style={{ background: "linear-gradient(to right, rgba(201,169,110,0.8), rgba(201,169,110,0.2), transparent)" }}
+                />
+              )}
               {/* Image with gallery trigger overlay */}
               <div className="relative h-44 overflow-hidden shrink-0" style={{ background: "var(--bg-2)" }}>
                 {project.image ? (
