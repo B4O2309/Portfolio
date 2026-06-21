@@ -433,7 +433,7 @@ In the world of Elyndra, an ancient stone chooses its next champion. The player 
     github: null,
     liveUrl: null,
     image: "/ashenblade/gameplay-combat-skill1.jpg",
-    featured: false,
+    featured: true,
     order: 5,
     year: "2025",
     role: "Solo Developer",

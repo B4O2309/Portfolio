@@ -122,8 +122,8 @@ export function ProjectsGrid({ projects, initialTab }: Props) {
                   )}
                 </Link>
 
-                {/* Category pill */}
-                <div className="absolute top-4 left-4 z-10">
+                {/* Category pill + Featured badge */}
+                <div className="absolute top-4 left-4 z-10 flex items-center gap-1.5">
                   <span
                     className="flex items-center gap-1.5 px-2.5 py-1 text-[9px] tracking-[0.15em] font-bold border"
                     style={{ background: accentBg, borderColor: accentBorder, color: accent, fontFamily: "var(--font-mono)" }}
@@ -131,6 +131,14 @@ export function ProjectsGrid({ projects, initialTab }: Props) {
                     {isWeb ? <Zap size={9} /> : <Gamepad2 size={9} />}
                     {isWeb ? "WEB APP" : "GAME"}
                   </span>
+                  {project.featured && (
+                    <span
+                      className="px-2 py-1 text-[9px] tracking-[0.15em] font-bold border"
+                      style={{ background: "rgba(201,169,110,0.12)", borderColor: "rgba(201,169,110,0.5)", color: "var(--gold)", fontFamily: "var(--font-mono)" }}
+                    >
+                      ★ FEATURED
+                    </span>
+                  )}
                 </div>
 
                 {/* Gallery button */}

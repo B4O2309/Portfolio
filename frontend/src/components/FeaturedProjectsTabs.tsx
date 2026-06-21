@@ -115,8 +115,8 @@ export function FeaturedProjectsTabs({ webProjects, gameProjects }: Props) {
                   </div>
                 )}
 
-                {/* Category badge */}
-                <div className="absolute top-3 left-3">
+                {/* Category badge + Featured badge */}
+                <div className="absolute top-3 left-3 flex items-center gap-1.5">
                   <span
                     className="flex items-center gap-1 px-2 py-1 text-[9px] tracking-[0.15em] font-bold border"
                     style={{
@@ -129,6 +129,14 @@ export function FeaturedProjectsTabs({ webProjects, gameProjects }: Props) {
                     {isWeb ? <Zap size={8} /> : <Gamepad2 size={8} />}
                     {isWeb ? "WEB" : "GAME"}
                   </span>
+                  {project.featured && (
+                    <span
+                      className="px-2 py-1 text-[9px] tracking-[0.15em] font-bold border"
+                      style={{ background: "rgba(201,169,110,0.12)", borderColor: "rgba(201,169,110,0.5)", color: "var(--gold)", fontFamily: "var(--font-mono)" }}
+                    >
+                      ★ FEATURED
+                    </span>
+                  )}
                 </div>
 
                 {/* Gallery button — appears on hover if media exists */}
