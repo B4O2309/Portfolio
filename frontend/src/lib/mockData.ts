@@ -324,7 +324,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
 
 
-- **Engine:** Unity 3D (URP)
+- **Engine:** Unity 6 (6000.0.2.15f1, URP)
 
 - **Language:** C#
 
@@ -516,7 +516,7 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
 ## Tech
 
-- **Engine:** Unity 2022+
+- **Engine:** Unity 6 (6000.0.2.15f1)
 
 - **Language:** C#
 
@@ -628,6 +628,154 @@ The game uses **Photon Fusion** for authoritative multiplayer and features a ful
 
   {
 
+    id: 4,
+
+    title: "Ashen's Blade",
+
+    slug: "ashens-blade",
+
+    description:
+
+      "A 2D side-scrolling action platformer built in Unity — play as a warrior chosen by an ancient stone, battle through grasslands, forests, and caves, master three combat skills, and take down the boss lurking at the end of each map.",
+
+    content: `## Overview
+
+
+
+**Ashen's Blade** is a 2D side-scrolling action platformer developed solo as a Semester 1 student project at VTC Academy (Game Programming major). Inspired by classics like Hollow Knight and Celeste, the game focuses on tight platforming, responsive melee combat, and a multi-layered parallax world that evolves across three distinct environments.
+
+
+
+## Story
+
+
+
+In the world of Elyndra, an ancient stone chooses its next champion. The player awakens in Ashwhisper Village and is greeted by Nyra — a mysterious cat NPC — with the words: *"Well well… looks like the stone has chosen you."* Armed with a blade, the warrior sets out through corrupted lands to defeat the darkness threatening each region.
+
+
+
+## Gameplay
+
+
+
+- **Side-scrolling platformer** — run, jump, and traverse three maps: grasslands (Map 1), dark forest (Map 2), and deep cave/dungeon (Map 3)
+
+- **Melee combat** — directional sword attacks with combo potential
+
+- **Three active skills:**
+
+  - **Dash / Slide** — rapid horizontal burst for mobility and dodging
+
+  - **Heal** — restore HP mid-combat at the cost of skill charges
+
+  - **Power Burst** — explosive spiky aura dealing AoE damage
+
+- **Skill HUD** — bottom panel showing skill icons, charges, and HP bar (100 HP)
+
+- **NPC dialogue system** — click-triggered conversations that advance the story
+
+- **Boss encounters** — each map culminates in a boss fight with unique patterns
+
+- **Parallax background** — multi-layer scrolling at different speeds creates depth in every scene
+
+
+
+## Systems
+
+
+
+- HP system — visual bar + damage numbers on hit; death triggers "You Died!" screen
+
+- Game Over ("You Died? Try Again?") — Yes restarts the map, No returns to Main Menu
+
+- Win Screen ("Thanks for playing") — shown after clearing the final boss in Map 3
+
+- Pause Menu (ESC) — Resume, Settings, Quit to Main Menu
+
+- Audio Settings — Master Volume, Music Volume, SFX Volume sliders
+
+
+
+## Tech
+
+
+
+- **Engine:** Unity 6 (6000.0.2.15f1)
+
+- **Language:** C#
+
+- **IDE:** Visual Studio 2022
+
+- **Art tools:** Photoshop / Piskel
+
+- **Audio tools:** Audacity
+
+- **Platform:** Windows PC`,
+
+    category: "game",
+
+    tags: ["2D Platformer", "Solo", "Pixel Art", "Unity", "C#", "Side-scrolling"],
+
+    github: null,
+
+    liveUrl: null,
+
+    image: "/ashenblade/gameplay-combat-skill1.jpg",
+
+    featured: true,
+
+    order: 4,
+
+    year: "2025",
+
+    role: "Solo Developer",
+
+    team: "Solo",
+
+    duration: "~1 month",
+
+    createdAt: "2025-01-01T00:00:00Z",
+
+    updatedAt: "2025-05-24T00:00:00Z",
+
+    media: [
+
+      { type: "video", url: "https://www.youtube.com/embed/qdf7tgF4WkQ", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo — gameplay, combat, skills, NPC dialogue, and UI" },
+
+      // ── Scenes ─────────────────────────────────────────────
+
+      { type: "image", url: "/ashenblade/gameplay-map1-village.jpg",  caption: "Main Menu" },
+
+      { type: "image", url: "/ashenblade/gameplay-map2-cave.png",     caption: "Map 1 — Cave entrance: dark rocky cliffs with golden stone platforms, transition between worlds" },
+
+      { type: "image", url: "/ashenblade/gameplay-map1-hud.jpg",      caption: "Map 2 gameplay — HUD: HP bar (100/100), 3 skill slots (dash / heal / slash), area title banner" },
+
+      { type: "image", url: "/ashenblade/gameplay-npc-dialogue.jpg",  caption: "NPC dialogue — cat Nyra" },
+
+      { type: "image", url: "/ashenblade/gameplay-map3-dungeon.png",  caption: "Map 3 — Dungeon Scene" },
+
+      // ── Skills ─────────────────────────────────────────────
+
+      { type: "image", url: "/ashenblade/gameplay-combat-skill1.jpg", caption: "Skill 1 — Dash: rapid horizontal burst for dodging" },
+
+      { type: "image", url: "/ashenblade/gameplay-skill-burst.jpg",   caption: "Skill 3 — Heal: blue healing light VFX, restoring HP instantly" },
+
+      { type: "image", url: "/ashenblade/gameplay-skill3-slash.png",  caption: "Skill 4 — Blade Slash, red slash VFX, dealing critical damage" },
+
+      // ── UI ─────────────────────────────────────────────────
+
+      { type: "image", url: "/ashenblade/ui-pause-menu.jpg",          caption: "Pause Menu" },
+
+      { type: "image", url: "/ashenblade/ui-you-died.jpg",            caption: "Game Over UI" },
+
+      { type: "image", url: "/ashenblade/ui-win-screen.jpg",          caption: "Win Screen UI" },
+
+    ] as MediaItem[],
+
+  },
+
+  {
+
     id: 3,
 
     title: "The Last Homestead",
@@ -714,7 +862,7 @@ Three acts, three maps:
 
 
 
-- **Engine:** Unity 2022+
+- **Engine:** Unity 6 (6000.0.2.15f1)
 
 - **Language:** C#
 
@@ -732,7 +880,7 @@ Three acts, three maps:
 
     featured: false,
 
-    order: 4,
+    order: 5,
 
     year: "2025",
 
@@ -767,154 +915,6 @@ Three acts, three maps:
       { type: "image", url: "/tlh/ui-victory.png",                  caption: "Victory Screen — \"Final Boss Defeated!\" displayed after breaking the curse" },
 
       { type: "image", url: "/tlh/ui-game-over.png",                caption: "Game Over — Retry or return to Main Menu, boss looming in the background" },
-
-    ] as MediaItem[],
-
-  },
-
-  {
-
-    id: 4,
-
-    title: "Ashen's Blade",
-
-    slug: "ashens-blade",
-
-    description:
-
-      "A 2D side-scrolling action platformer built in Unity — play as a warrior chosen by an ancient stone, battle through grasslands, forests, and caves, master three combat skills, and take down the boss lurking at the end of each map.",
-
-    content: `## Overview
-
-
-
-**Ashen's Blade** is a 2D side-scrolling action platformer developed solo as a Semester 1 student project at VTC Academy (Game Programming major). Inspired by classics like Hollow Knight and Celeste, the game focuses on tight platforming, responsive melee combat, and a multi-layered parallax world that evolves across three distinct environments.
-
-
-
-## Story
-
-
-
-In the world of Elyndra, an ancient stone chooses its next champion. The player awakens in Ashwhisper Village and is greeted by Nyra — a mysterious cat NPC — with the words: *"Well well… looks like the stone has chosen you."* Armed with a blade, the warrior sets out through corrupted lands to defeat the darkness threatening each region.
-
-
-
-## Gameplay
-
-
-
-- **Side-scrolling platformer** — run, jump, and traverse three maps: grasslands (Map 1), dark forest (Map 2), and deep cave/dungeon (Map 3)
-
-- **Melee combat** — directional sword attacks with combo potential
-
-- **Three active skills:**
-
-  - **Dash / Slide** — rapid horizontal burst for mobility and dodging
-
-  - **Heal** — restore HP mid-combat at the cost of skill charges
-
-  - **Power Burst** — explosive spiky aura dealing AoE damage
-
-- **Skill HUD** — bottom panel showing skill icons, charges, and HP bar (100 HP)
-
-- **NPC dialogue system** — click-triggered conversations that advance the story
-
-- **Boss encounters** — each map culminates in a boss fight with unique patterns
-
-- **Parallax background** — multi-layer scrolling at different speeds creates depth in every scene
-
-
-
-## Systems
-
-
-
-- HP system — visual bar + damage numbers on hit; death triggers "You Died!" screen
-
-- Game Over ("You Died? Try Again?") — Yes restarts the map, No returns to Main Menu
-
-- Win Screen ("Thanks for playing") — shown after clearing the final boss in Map 3
-
-- Pause Menu (ESC) — Resume, Settings, Quit to Main Menu
-
-- Audio Settings — Master Volume, Music Volume, SFX Volume sliders
-
-
-
-## Tech
-
-
-
-- **Engine:** Unity 2022+ (Unity 6.2 Alpha)
-
-- **Language:** C#
-
-- **IDE:** Visual Studio 2022
-
-- **Art tools:** Photoshop / Piskel
-
-- **Audio tools:** Audacity
-
-- **Platform:** Windows PC`,
-
-    category: "game",
-
-    tags: ["2D Platformer", "Solo", "Pixel Art", "Unity", "C#", "Side-scrolling"],
-
-    github: null,
-
-    liveUrl: null,
-
-    image: "/ashenblade/gameplay-combat-skill1.jpg",
-
-    featured: true,
-
-    order: 5,
-
-    year: "2025",
-
-    role: "Solo Developer",
-
-    team: "Solo",
-
-    duration: "~1 month",
-
-    createdAt: "2025-01-01T00:00:00Z",
-
-    updatedAt: "2025-05-24T00:00:00Z",
-
-    media: [
-
-      { type: "video", url: "https://www.youtube.com/embed/qdf7tgF4WkQ", thumbnail: "/ashenblade/gameplay-map1-village.jpg", caption: "Full demo — gameplay, combat, skills, NPC dialogue, and UI" },
-
-      // ── Scenes ─────────────────────────────────────────────
-
-      { type: "image", url: "/ashenblade/gameplay-map1-village.jpg",  caption: "Main Menu" },
-
-      { type: "image", url: "/ashenblade/gameplay-map2-cave.png",     caption: "Map 1 — Cave entrance: dark rocky cliffs with golden stone platforms, transition between worlds" },
-
-      { type: "image", url: "/ashenblade/gameplay-map1-hud.jpg",      caption: "Map 2 gameplay — HUD: HP bar (100/100), 3 skill slots (dash / heal / slash), area title banner" },
-
-      { type: "image", url: "/ashenblade/gameplay-npc-dialogue.jpg",  caption: "NPC dialogue — cat Nyra" },
-
-      { type: "image", url: "/ashenblade/gameplay-map3-dungeon.png",  caption: "Map 3 — Dungeon Scene" },
-
-      // ── Skills ─────────────────────────────────────────────
-
-      { type: "image", url: "/ashenblade/gameplay-combat-skill1.jpg", caption: "Skill 1 — Dash: rapid horizontal burst for dodging" },
-
-      { type: "image", url: "/ashenblade/gameplay-skill-burst.jpg",   caption: "Skill 3 — Heal: blue healing light VFX, restoring HP instantly" },
-
-      { type: "image", url: "/ashenblade/gameplay-skill3-slash.png",  caption: "Skill 4 — Blade Slash, red slash VFX, dealing critical damage" },
-
-      // ── UI ─────────────────────────────────────────────────
-
-      { type: "image", url: "/ashenblade/ui-pause-menu.jpg",          caption: "Pause Menu" },
-
-      { type: "image", url: "/ashenblade/ui-you-died.jpg",            caption: "Game Over UI" },
-
-      { type: "image", url: "/ashenblade/ui-win-screen.jpg",          caption: "Win Screen UI" },
 
     ] as MediaItem[],
 
@@ -992,7 +992,7 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
 
 
-- **Engine:** Unity (URP)
+- **Engine:** Unity 6 (6000.3.12f1, URP)
 
 - **Language:** C#
 
@@ -1040,17 +1040,17 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
     order: 6,
 
-    year: "2025",
+    year: "2026",
 
     role: "Game Developer",
 
     team: "5-person team",
 
-    duration: undefined,
+    duration: "~2 weeks",
 
-    createdAt: "2025-01-01T00:00:00Z",
+    createdAt: "2026-01-01T00:00:00Z",
 
-    updatedAt: "2025-01-01T00:00:00Z",
+    updatedAt: "2026-01-01T00:00:00Z",
 
     media: [
 
