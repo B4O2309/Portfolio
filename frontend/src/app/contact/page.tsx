@@ -86,7 +86,7 @@ export default function ContactPage() {
             style={{ color: "var(--text-2)", fontFamily: "var(--font-mono)" }}
           >
             Thanks for reaching out. I&apos;ll review your message and get back
-            to you within 48 hours.
+            to you within 24 hours.
           </p>
           <button
             onClick={() => setSubmitted(false)}

@@ -68,14 +68,19 @@ export async function submitContact(
           `,
         });
       } catch (emailErr) {
-        // Non-fatal — message is already saved to DB
-        console.error("Email send failed (message saved to DB):", emailErr);
+        console.error("❌ EMAIL FAILED:", emailErr);
+        return next(
+          new AppError(
+            "Failed to send message. Please try again later or contact me directly via email.",
+            502
+          )
+        );
       }
     }
 
     res.status(201).json({
       success: true,
-      message: "Message received. I'll get back to you within 24–48 hours.",
+      message: "Message received. I'll get back to you within 24 hours.",
       data: { id: contact.id },
     });
   } catch (err) {
