@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, Mail, MessageSquare, MapPin, Clock } from "lucide-react";
+import { Send, CheckCircle, Mail, Gamepad2, MapPin, Clock } from "lucide-react";
 import { submitContact } from "@/lib/api";
 import { Footer } from "@/components/layout/Footer";
 
@@ -16,7 +16,7 @@ const initialForm: FormState = { name: "", email: "", subject: "", message: "" }
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "bao.nhgia05@gmail.com", href: "mailto:bao.nhgia05@gmail.com" },
-  { icon: MessageSquare, label: "Discord", value: "nhgbao239_", href: "#" },
+  { icon: Gamepad2, label: "itch.io", value: "b4o2309.itch.io", href: "https://b4o2309.itch.io" },
   { icon: MapPin, label: "Location", value: "Ho Chi Minh City, Vietnam", href: null },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },
 ];
