@@ -1050,6 +1050,8 @@ The camera orbits the room from one of four fixed isometric angles, snapping 90�
 
     media: [
 
+      { type: "video", url: "https://www.youtube.com/embed/ckcGENn_jTw", thumbnail: "/cockescape/Room2.png", caption: "Demo — color mixing puzzles, isometric camera rotation, and room progression" },
+
       { type: "image", url: "/cockescape/MainMenu.png",            caption: "Main Menu — animated voxel avatar with idle loop and Easter egg tap interaction" },
 
       { type: "image", url: "/cockescape/Room1.png",               caption: "Room 1 — isometric view with color mixing panel and camera rotate buttons at bottom corners" },
