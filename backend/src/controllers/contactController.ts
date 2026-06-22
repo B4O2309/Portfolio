@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { PrismaClient } from "@prisma/client";
 import { z } from "zod";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { AppError } from "../middleware/errorHandler";
 
 const prisma = new PrismaClient();
@@ -16,18 +16,6 @@ const contactSchema = z.object({
     .max(5000),
 });
 
-function createTransporter() {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-}
-
 export async function submitContact(
   req: Request,
   res: Response,
@@ -37,9 +25,7 @@ export async function submitContact(
     // Validate input
     const parsed = contactSchema.safeParse(req.body);
     if (!parsed.success) {
-      return next(
-        new AppError(parsed.error.errors[0].message, 400)
-      );
+      return next(new AppError(parsed.error.errors[0].message, 400));
     }
 
     const { name, email, subject, message } = parsed.data;
@@ -49,16 +35,15 @@ export async function submitContact(
       data: { name, email, subject, message },
     });
 
-    // Send email notification if SMTP is configured
-    if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+    // Send email via Resend
+    if (process.env.RESEND_API_KEY && process.env.CONTACT_RECEIVER) {
       try {
-        const transporter = createTransporter();
-        await transporter.sendMail({
-          from: `"Portfolio Contact" <${process.env.SMTP_USER}>`,
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        const { error } = await resend.emails.send({
+          from: process.env.RESEND_FROM || "Portfolio <onboarding@resend.dev>",
           to: process.env.CONTACT_RECEIVER,
           replyTo: email,
           subject: `[Portfolio] ${subject}`,
-          text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
           html: `
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
@@ -67,6 +52,16 @@ export async function submitContact(
             <p>${message.replace(/\n/g, "<br>")}</p>
           `,
         });
+
+        if (error) {
+          console.error("❌ RESEND ERROR:", error);
+          return next(
+            new AppError(
+              "Failed to send message. Please try again later or contact me directly via email.",
+              502
+            )
+          );
+        }
       } catch (emailErr) {
         console.error("❌ EMAIL FAILED:", emailErr);
         return next(
