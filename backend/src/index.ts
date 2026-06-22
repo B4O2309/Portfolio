@@ -10,7 +10,7 @@ import contactRouter from "./routes/contact";
 import { errorHandler, notFound } from "./middleware/errorHandler";
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = Number(process.env.PORT || 4000);
 
 app.set("trust proxy", 1);
 
@@ -51,10 +51,13 @@ app.use(notFound);
 app.use(errorHandler);
 
 // ── Start server ──────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 Backend running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  const baseUrl = process.env.NODE_ENV === "production"
+    ? (process.env.BACKEND_URL || `http://0.0.0.0:${PORT}`)
+    : `http://localhost:${PORT}`;
+  console.log(`\n🚀 Backend running on ${baseUrl}`);
   console.log(`   Environment : ${process.env.NODE_ENV || "development"}`);
-  console.log(`   Health check: http://localhost:${PORT}/api/health\n`);
+  console.log(`   Health check: ${baseUrl}/api/health\n`);
 });
 
 export default app;
